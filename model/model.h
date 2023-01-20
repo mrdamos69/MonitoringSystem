@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <math.h>
 
 using std::vector;
 using std::string;
@@ -17,14 +18,18 @@ class Model {
 
   vector<double> starting_memory_agent();
 
-  std::pair<bool, double> starting_network();
+  std::pair<bool, double> starting_network_agent(std::string url);
 
-  void uploading_data_to_file(double cpu, int processes,
-                              double ram_total, double ram,
-                              double hard_volume, int hard_ops,
-                              double hard_throughput,
-                              bool network_url,
-                              double doubleinet_throughput);
+  // void uploading_data_to_file(double cpu, int processes,
+  //                             double ram_total, double ram,
+  //                             double hard_volume, int hard_ops,
+  //                             double hard_throughput,
+  //                             bool network_url,
+  //                             double doubleinet_throughput);
+
+  bool validation_url(std::string url);
+
+  double speed_network();
 
 };
 }  // namespace s21

@@ -2,7 +2,11 @@
 
 #include "../model/model.h"
 
-TEST(Test_s21_smart_calc, test_1) {
+TEST(Test_Monitoring_system, test_check_url) {
+  s21::Model model;
+  std::pair<bool, double> result;
+  result = model.starting_network_agent("https://edu.21-school.ru");
+  ASSERT_TRUE(result.first && result.second > 0);
 }
 
 int main(int argc, char *argv[]) {
