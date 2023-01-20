@@ -6,6 +6,7 @@
 #include <vector>
 #include <fstream>
 #include <math.h>
+#include <array>
 
 using std::vector;
 using std::string;
@@ -15,6 +16,8 @@ class Model {
  public:
   Model() {};
   std::pair<double, int> starting_cpu_agent();
+
+  void download_file_with_marks_memory();
 
   vector<double> starting_memory_agent();
 
