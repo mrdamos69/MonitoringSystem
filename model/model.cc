@@ -4,7 +4,7 @@
   std::pair<double, int> s21::Model::starting_cpu_agent() {
     double cpu;
     int processes;
-
+    
     return std::pair<double, int> ();
   }
 
@@ -12,6 +12,7 @@
     vector<double> mem_metric;
     double ram_total, ram, hard_volume, hard_throughput;
     int hard_ops;
+    return mem_metric;
   }
 
   std::pair<bool, double> s21::Model::starting_network() {
