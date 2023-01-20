@@ -1,6 +1,5 @@
 #include "model.h"
 
-
   // std::pair<double, int> s21::Model::starting_cpu_agent() {
   //   double cpu;
   //   int processes;
@@ -16,7 +15,7 @@
   // }
 
   std::pair<bool, double> s21::Model::starting_network_agent(std::string url) {
-    return std::pair<bool, double> (validation_url(url), 44);
+    return std::pair<bool, double> (validation_url(url), speed_network());
   }
 
   // void s21::Model::uploading_data_to_file(double cpu, int processes,
