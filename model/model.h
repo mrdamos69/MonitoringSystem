@@ -15,7 +15,7 @@ namespace s21 {
 class Model {
  public:
   Model() {};
-  std::pair<double, int> starting_cpu_agent();
+  std::vector<double> starting_cpu_agent();
 
   void download_file_with_marks_memory();
 

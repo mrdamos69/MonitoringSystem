@@ -1,11 +1,28 @@
 #include "model.h"
 
-  // std::pair<double, int> s21::Model::starting_cpu_agent() {
-  //   double cpu;
-  //   int processes;
-    
-  //   return std::pair<double, int> ();
-  // }
+  std::vector<double> s21::Model::starting_cpu_agent() {
+    std::fstream myfile;
+    myfile.open ("text.txt", std::ios_base::app);
+    std::string cpu = "top -l 1 | grep -E \"^CPU\" | awk '{print $3}' | cut -c 1-4";
+    std::string processes = "ps -e | wc -l | cut -c 6-8";
+    std::array<char, 80> buffer;
+    std::vector<std::string> marks = {cpu, processes};
+    for (auto i : marks) {
+    FILE* pipe = popen(i.c_str(), "r+");
+    while (fgets(buffer.data(), 80, pipe) != nullptr)
+        myfile << buffer.data();
+    pclose(pipe);
+    }
+    myfile.close();
+    std::ifstream file("text.txt");
+   std::vector<double> n; //Вектор строк
+   std::string S;  //Считываемое слово из файла
+   while(std::getline(file, S)) { 
+   n.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
+   }
+    // for (unsigned int i=0;i<n.size();i++) std::cout<<n.at(i)<<" "; //Вывод вектора на экран
+  }
+
   void s21::Model::download_file_with_marks_memory() {
     std::fstream myfile;
     myfile.open ("text.txt", std::ios_base::app);
