@@ -99,17 +99,17 @@
   void s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {
     if(cpu) {
       std::thread thread_1([this](){this->starting_cpu_agent();});
-      std::cout << "\nTR_2_ID: " << thread_1.get_id() << std::endl;
+      // std::cout << "\nTR_1_ID: " << thread_1.get_id() << std::endl;
       thread_1.join();
     }
     if(memory) {
       std::thread thread_2([this](){this->starting_memory_agent();});
-      std::cout << "\nTR_2_ID: " << thread_2.get_id() << std::endl;
+      // std::cout << "\nTR_2_ID: " << thread_2.get_id() << std::endl;
       thread_2.join();
     }
     if(network) {
       std::thread thread_3([this, url](){this->starting_network_agent(url.data());});
-      std::cout << "\nTR_3_ID: " << thread_3.get_id() << std::endl;
+      // std::cout << "\nTR_3_ID: " << thread_3.get_id() << std::endl;
       thread_3.join();
     }
   }
