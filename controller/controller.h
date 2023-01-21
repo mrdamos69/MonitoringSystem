@@ -10,11 +10,11 @@ class Controller {
   s21::Model model;
 
  public:
-//   std::pair<double, int> starting_cpu_agent();
+  vector<double> starting_cpu_agent(bool check);
 
-//   vector<double> starting_memory_agent();
+  vector<double> starting_memory_agent(bool check);
 
-  std::pair<bool, double> starting_network_agent(std::string url);
+  std::pair<bool, double> starting_network_agent(std::string url, bool check);
 
 //   void uploading_data_to_file(double cpu, int processes,
 //                               double ram_total, double ram,

@@ -7,6 +7,8 @@
 #include <fstream>
 #include <math.h>
 #include <array>
+#include <thread>
+#include <chrono>
 
 using std::vector;
 using std::string;
@@ -15,13 +17,13 @@ namespace s21 {
 class Model {
  public:
   Model() {};
-  std::vector<double> starting_cpu_agent();
+  std::vector<double> starting_cpu_agent(bool check);
 
   void download_file_with_marks_memory();
 
-  vector<double> starting_memory_agent();
+  vector<double> starting_memory_agent(bool check);
 
-  std::pair<bool, double> starting_network_agent(std::string url);
+  std::pair<bool, double> starting_network_agent(std::string url, bool check);
 
   // void uploading_data_to_file(double cpu, int processes,
   //                             double ram_total, double ram,
@@ -33,6 +35,8 @@ class Model {
   bool validation_url(std::string url);
 
   double speed_network();
+
+  void starting_agents(bool cpu, bool memory, bool network, std::string url);
 
 };
 }  // namespace s21

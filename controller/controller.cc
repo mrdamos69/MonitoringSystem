@@ -1,15 +1,15 @@
 #include "controller.h"
 
-// std::pair<double, int> s21::Controller::starting_cpu_agent() {
-//   return model.starting_cpu_agent();
-// }
+vector<double> s21::Controller::starting_cpu_agent(bool check) {
+  return model.starting_cpu_agent(check);
+}
 
-// vector<double> s21::Controller::starting_memory_agent() {
-//   return model.starting_memory_agent();
-// }
+vector<double> s21::Controller::starting_memory_agent(bool check) {
+  return model.starting_memory_agent(check);
+}
 
-std::pair<bool, double> s21::Controller::starting_network_agent(std::string url) {
-  return model.starting_network_agent(url);
+std::pair<bool, double> s21::Controller::starting_network_agent(std::string url, bool check) {
+  return model.starting_network_agent(url, check);
 }
 
 // void s21::Controller::uploading_data_to_file(double cpu, int processes,
