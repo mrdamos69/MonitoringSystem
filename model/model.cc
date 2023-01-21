@@ -5,24 +5,24 @@
     if(check) {
       std::cout << "\nTR_1_ID: " << std::this_thread::get_id() << std::endl; // ID потока
       std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-      // std::fstream myfile;
-      // myfile.open ("text.txt", std::ios_base::app);
-      // std::string cpu = "top -l 1 | grep -E \"^CPU\" | awk '{print $3}' | cut -c 1-4";
-      // std::string processes = "ps -e | wc -l | cut -c 6-8";
-      // std::array<char, 80> buffer;
-      // std::vector<std::string> marks = {cpu, processes};
-      // for (auto i : marks) {
-      // FILE* pipe = popen(i.c_str(), "r+");
-      // while (fgets(buffer.data(), 80, pipe) != nullptr)
-      //     myfile << buffer.data();
-      // pclose(pipe);
-      // }
-      // myfile.close();
-      // std::ifstream file("text.txt");
-      // std::string S;  //Считываемое слово из файла
-      // while(std::getline(file, S)) { 
-      //   n.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
-      // }
+      std::fstream myfile;
+      myfile.open ("text.txt", std::ios_base::app);
+      std::string cpu = "top -l 1 | grep -E \"^CPU\" | awk '{print $3}' | cut -c 1-4";
+      std::string processes = "ps -e | wc -l | cut -c 6-8";
+      std::array<char, 80> buffer;
+      std::vector<std::string> marks = {cpu, processes};
+      for (auto i : marks) {
+      FILE* pipe = popen(i.c_str(), "r+");
+      while (fgets(buffer.data(), 80, pipe) != nullptr)
+          myfile << buffer.data();
+      pclose(pipe);
+      }
+      myfile.close();
+      std::ifstream file("text.txt");
+      std::string S;  //Считываемое слово из файла
+      while(std::getline(file, S)) { 
+        n.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
+      }
       // for (unsigned int i=0;i<n.size();i++) std::cout<<n.at(i)<<" "; //Вывод вектора на экран
     }
     return n;
@@ -51,12 +51,12 @@
     std::vector<double> v {0}; //Вектор строк
     if(check) {
       std::cout << "\nTR_2_ID: " << std::this_thread::get_id() << std::endl; // ID потока
-      // download_file_with_marks_memory(); 
-      // std::ifstream file("text.txt");
-      // std::string S;  //Считываемое слово из файла
-      // while(std::getline(file, S)) { 
-      //   v.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
-      // }
+      download_file_with_marks_memory(); 
+      std::ifstream file("text.txt");
+      std::string S;  //Считываемое слово из файла
+      while(std::getline(file, S)) { 
+        v.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
+      }
 //    for (unsigned int i=0;i<v.size();i++) std::cout<<v.at(i)<<" "; //Вывод вектора на экран
     }
     return v;
@@ -122,10 +122,18 @@
     //   std::thread thread_3([this, url](){this->starting_network_agent(url.data());});
     //   thread_3.join();
     // }
-      
-      std::thread thread_1([this, cpu](){this->starting_cpu_agent(cpu);});
-      std::thread thread_2([this, memory](){this->starting_memory_agent(memory);});
-      std::thread thread_3([this, url, network](){this->starting_network_agent(url.data(), network);});
+      std::vector<double> result;
+      std::thread thread_1([this, cpu](){
+        this->starting_cpu_agent(cpu);
+      });
+
+      std::thread thread_2([this, memory](){
+        this->starting_memory_agent(memory);
+      });
+
+      std::thread thread_3([this, url, network](){
+        this->starting_network_agent(url.data(), network);
+      });
       thread_1.join();
       thread_2.join();
       thread_3.join();
