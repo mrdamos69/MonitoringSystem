@@ -15,12 +15,13 @@
     }
     myfile.close();
     std::ifstream file("text.txt");
-   std::vector<double> n; //Вектор строк
-   std::string S;  //Считываемое слово из файла
-   while(std::getline(file, S)) { 
-   n.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
-   }
+    std::vector<double> n; //Вектор строк
+    std::string S;  //Считываемое слово из файла
+    while(std::getline(file, S)) { 
+      n.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
+    }
     // for (unsigned int i=0;i<n.size();i++) std::cout<<n.at(i)<<" "; //Вывод вектора на экран
+    return n;
   }
 
   void s21::Model::download_file_with_marks_memory() {
@@ -43,15 +44,15 @@
   }
   
   vector<double> s21::Model::starting_memory_agent() {
-   download_file_with_marks_memory(); 
-   std::ifstream file("text.txt");
-   std::vector<double> v; //Вектор строк
-   std::string S;  //Считываемое слово из файла
+    download_file_with_marks_memory(); 
+    std::ifstream file("text.txt");
+    std::vector<double> v; //Вектор строк
+    std::string S;  //Считываемое слово из файла
    while(std::getline(file, S)) { 
-   v.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
+    v.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
    }
 //    for (unsigned int i=0;i<v.size();i++) std::cout<<v.at(i)<<" "; //Вывод вектора на экран
-  return v;
+    return v;
   }
 
   std::pair<bool, double> s21::Model::starting_network_agent(std::string url) {
@@ -93,4 +94,22 @@
     temp_file.close();
     std::system("rm temp_file_9.conf");
     return atof(lineptr.data());
+  }
+
+  void s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {
+    if(cpu) {
+      std::thread thread_1([this](){this->starting_cpu_agent();});
+      std::cout << "\nTR_2_ID: " << thread_1.get_id() << std::endl;
+      thread_1.join();
+    }
+    if(memory) {
+      std::thread thread_2([this](){this->starting_memory_agent();});
+      std::cout << "\nTR_2_ID: " << thread_2.get_id() << std::endl;
+      thread_2.join();
+    }
+    if(network) {
+      std::thread thread_3([this, url](){this->starting_network_agent(url.data());});
+      std::cout << "\nTR_3_ID: " << thread_3.get_id() << std::endl;
+      thread_3.join();
+    }
   }

@@ -7,6 +7,8 @@
 #include <fstream>
 #include <math.h>
 #include <array>
+#include <thread>
+#include <chrono>
 
 using std::vector;
 using std::string;
@@ -33,6 +35,8 @@ class Model {
   bool validation_url(std::string url);
 
   double speed_network();
+
+  void starting_agents(bool cpu, bool memory, bool network, std::string url);
 
 };
 }  // namespace s21
