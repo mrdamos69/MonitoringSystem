@@ -90,8 +90,8 @@
   }
 
   double s21::Model::ram_total() {
-    std::string command = "bash -c 'free -m | awk '/Mem:/ {print $2}''";
-    std::string output = "";
+    std::string command = "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}'";
+    std::string output = "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
     if (!pipe) {
@@ -122,7 +122,7 @@
   }
 
   double s21::Model::hard_volume() {
-    std::string command = "bash -c 'df -h | awk '/[0-9]%/{print $(NF-1)}''";
+    std::string command = "df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
@@ -138,7 +138,7 @@
   }
 
   double s21::Model::hard_ops() {
-    std::string command = "bash -c 'iostat -d -k | awk '/sda/ {print $3}''";
+    std::string command = "iostat -c 1 -w 10 disk0 | awk '{print $1}'| tail -1";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
@@ -154,7 +154,7 @@
   }
 
   double s21::Model::hard_throughput() {
-    std::string command = "bash -c 'iostat -d -k | awk '/sda/ {print $4}''";
+    std::string command = "iostat -c 1 -w 10 disk3 | awk '{print $1}'| tail -1";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
@@ -203,7 +203,7 @@
   }
 
   double s21::Model::speed_network() {
-    std::string command = "bash -c 'cat /proc/net/dev'";
+    std::string command = "netstat -bI en0 | grep -E ""en0|Bytes"" | grep -v ""Refs"" | awk '{print $7}'";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
