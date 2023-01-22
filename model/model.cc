@@ -71,41 +71,65 @@
     }
   }
 
-  // void s21::Model::uploading_data_to_file(double cpu, int processes,
-  //                                         double ram_total, double ram,
-  //                                         double hard_volume, int hard_ops,
-  //                                         double hard_throughput, bool network_url,
-  //                                         double doubleinet_throughput) {
-    
-  // }
+  void s21::Model::uploading_data_to_file(const std::vector<double>& data1,
+                                          const std::vector<double>& data2,
+                                          std::pair<bool, double> config) {
+    std::ofstream file("config.conf");
+    file << "Data1:" << std::endl;
+    for (double d : data1) {
+        file << d << std::endl;
+    }
+    file << "Data2:" << std::endl;
+    for (double d : data2) {
+        file << d << std::endl;
+    }
+    file << "Configuration:" << std::endl;
+    file << "Option: " << config.first << std::endl;
+    file << "Value: " << config.second << std::endl;
+    file.close();
+  }
 
   bool s21::Model::validation_url(std::string url) {
-    std::string curl = "curl ";
-    std::string script = curl + url + " >> temp_file_8.conf";
-    std::system(script.data());
-    int count = 0;
-    std::ifstream temp_file("temp_file_8.conf");
-    if (!temp_file.eof()) {
-      std::string lineptr;
-      while (std::getline(temp_file, lineptr))
-        count++;
-    }
-    temp_file.close();
-    std::system("rm temp_file_8.conf");
-    return (count > 1 ? true : false);
+    std::string command = "curl -I " + url + " -o /dev/null -s -w '%{http_code}\n'";
+    int status = std::system(command.c_str());
+    return (status == 0 ? true : false);
   }
 
   double s21::Model::speed_network() {
-    std::string script = "speedtest | awk '/Download:/ { print $2 }' >> temp_file_9.conf";
-    std::system(script.data());
-    std::string lineptr;
-    std::ifstream temp_file("temp_file_9.conf");
-    if (!temp_file.eof()) {
-      std::getline(temp_file, lineptr);
+    // std::string script = "speedtest | awk '/Download:/ { print $2 }' >> temp_file_9.conf";
+    // std::system(script.data());
+    // std::string lineptr;
+    // std::ifstream temp_file("temp_file_9.conf");
+    // if (!temp_file.eof()) {
+    //   std::getline(temp_file, lineptr);
+    // }
+    // temp_file.close();
+    // std::system("rm temp_file_9.conf");
+    // return atof(lineptr.data());
+    std::string command = "bash -c 'cat /proc/net/dev'";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
     }
-    temp_file.close();
-    std::system("rm temp_file_9.conf");
-    return atof(lineptr.data());
+    while (!std::feof(pipe)) {
+        if (std::fgets(buffer, 128, pipe) != NULL)
+            output += buffer;
+    }
+    std::pclose(pipe);
+
+    // Extract the interface name and bandwidth
+    std::smatch match;
+    std::regex pattern("[a-z]+:\\s+(\\d+)\\s+(\\d+)");
+    double inet_through = 0;
+    while (std::regex_search(output, match, pattern)) {
+        double rx = std::stod(match[1]);
+        double tx = std::stod(match[2]);
+        inet_through += rx + tx;
+        output = match.suffix().str();
+    }
+    return inet_through;
   }
 
   void s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {

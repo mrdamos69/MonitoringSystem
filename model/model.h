@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <cstdio>
+#include <regex>
 #include <vector>
 #include <fstream>
 #include <math.h>
@@ -25,12 +27,9 @@ class Model {
 
   std::pair<bool, double> starting_network_agent(std::string url, bool check);
 
-  // void uploading_data_to_file(double cpu, int processes,
-  //                             double ram_total, double ram,
-  //                             double hard_volume, int hard_ops,
-  //                             double hard_throughput,
-  //                             bool network_url,
-  //                             double doubleinet_throughput);
+  void uploading_data_to_file(const std::vector<double>& data1,
+                              const std::vector<double>& data2,
+                              std::pair<bool, double> config);
 
   bool validation_url(std::string url);
 

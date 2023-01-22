@@ -12,14 +12,8 @@ std::pair<bool, double> s21::Controller::starting_network_agent(std::string url,
   return model.starting_network_agent(url, check);
 }
 
-// void s21::Controller::uploading_data_to_file(double cpu, int processes,
-//                                         double ram_total, double ram,
-//                                         double hard_volume, int hard_ops,
-//                                         double hard_throughput, bool network_url,
-//                                         double doubleinet_throughput) {
-//   return model.uploading_data_to_file(cpu, processes,
-//                                       ram_total, ram,
-//                                       hard_volume, hard_ops,
-//                                       hard_throughput, network_url,
-//                                       doubleinet_throughput);
-// }
+void s21::Controller::uploading_data_to_file(const std::vector<double>& data1,
+                                            const std::vector<double>& data2,
+                                            std::pair<bool, double> config) {
+  return model.uploading_data_to_file(data1, data2, config);
+}
