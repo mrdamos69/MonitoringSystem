@@ -3,12 +3,15 @@
 
 #include <iostream>
 #include <string>
+#include <cstdio>
+#include <regex>
 #include <vector>
 #include <fstream>
 #include <math.h>
 #include <array>
 #include <thread>
 #include <chrono>
+#include "../lib_agents.h"
 
 using std::vector;
 using std::string;
@@ -18,26 +21,25 @@ class Model {
  public:
   Model() {};
   std::vector<double> starting_cpu_agent(bool check);
-
-  void download_file_with_marks_memory();
-
-  vector<double> starting_memory_agent(bool check);
-
+  std::vector<double> starting_memory_agent(bool check);
   std::pair<bool, double> starting_network_agent(std::string url, bool check);
 
-  // void uploading_data_to_file(double cpu, int processes,
-  //                             double ram_total, double ram,
-  //                             double hard_volume, int hard_ops,
-  //                             double hard_throughput,
-  //                             bool network_url,
-  //                             double doubleinet_throughput);
-
-  bool validation_url(std::string url);
-
-  double speed_network();
+  void uploading_data_to_file(const std::vector<double>& data1,
+                              const std::vector<double>& data2,
+                              std::pair<bool, double> config);
 
   void starting_agents(bool cpu, bool memory, bool network, std::string url);
 
+ private:
+  double cpu_load();
+  int number_of_processes();
+  double ram_total();
+  double ram();
+  double hard_volume();
+  double hard_ops();
+  double hard_throughput();
+  bool validation_url(std::string url);
+  double speed_network();
 };
 }  // namespace s21
 

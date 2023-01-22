@@ -27,7 +27,7 @@ $(PR_NAME).a:
 	@ar rcs $(PR_NAME).a $(ALL_FILE_O) 
 
 test: $(PR_NAME).a
-	@$(CC) $(CL_11) ./unit_test/unit_test.cc $(ALL_FILE_CC) -o tests.o -lgtest
+	@$(CC) $(CL_11) ./unit_test/unit_test.cc $(ALL_FILE_CC) -o tests.o -lgtest 
 	@./tests.o
 
 gcov_report:
