@@ -16,10 +16,8 @@
   }
 
    double s21::Model::cpu_load() {
-    std::string command = "bash -c 'top -bn1 | grep \"Cpu(s)\" | sed \"s/.*, *\\([0-9.]*\\)%* id.*/\\1/\"'";
-    std::string cores_command = "bash -c 'grep -c ^processor /proc/cpuinfo'";
+    std::string command = "top -l 1 | grep -E \"^CPU\" | awk '{print $3}' | cut -c 1-4";
     std::string output = "";
-    std::string cores_output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
     if (!pipe) {
@@ -34,7 +32,7 @@
   }
 
   int s21::Model::number_of_processes() {
-    std::string command = "bash -c 'ps aux | wc -l'";
+    std::string command = "ps -e | wc -l | cut -c 6-8";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
@@ -244,5 +242,4 @@
       thread_1.join();
       thread_2.join();
       thread_3.join();
-
   }
