@@ -1,65 +1,172 @@
 #include "model.h"
 
   std::vector<double> s21::Model::starting_cpu_agent(bool check) {
-    std::vector<double> n {0}; //Вектор строк
+    std::vector<double> result;
     if(check) {
-      std::cout << "\nTR_1_ID: " << std::this_thread::get_id() << std::endl; // ID потока
-      std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-      std::fstream myfile;
-      myfile.open ("text.txt", std::ios_base::app);
-      std::string cpu = "top -l 1 | grep -E \"^CPU\" | awk '{print $3}' | cut -c 1-4";
-      std::string processes = "ps -e | wc -l | cut -c 6-8";
-      std::array<char, 80> buffer;
-      std::vector<std::string> marks = {cpu, processes};
-      for (auto i : marks) {
-      FILE* pipe = popen(i.c_str(), "r+");
-      while (fgets(buffer.data(), 80, pipe) != nullptr)
-          myfile << buffer.data();
-      pclose(pipe);
-      }
-      myfile.close();
-      std::ifstream file("text.txt");
-      std::string S;  //Считываемое слово из файла
-      while(std::getline(file, S)) { 
-        n.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
-      }
-      // for (unsigned int i=0;i<n.size();i++) std::cout<<n.at(i)<<" "; //Вывод вектора на экран
+      std::cout << "\nTR_1_ID: " << std::this_thread::get_id() << std::endl;
+      double cpu_usage = this->cpu_load();
+      int processes = this->number_of_processes();
+      result.push_back(cpu_usage);
+      result.push_back(processes);
     }
-    return n;
+    // for(auto&&i : result) {
+    //   std::cout << i << std::endl;
+    // }
+    return result;
   }
 
-  void s21::Model::download_file_with_marks_memory() {
-    std::fstream myfile;
-    myfile.open ("text.txt", std::ios_base::app);
-    std::string ram_total = "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}' \n";
-    std::string ram = " ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }' \n";
-    std::string hard_volume = " df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3 \n";
-    std::string hard_ops = "iostat -c 1 -w 10 disk0 | awk '{print $1}'| tail -1 \n";
-    std::string hard_throughput = "iostat -c 1 -w 10 disk3 | awk '{print $1}'| tail -1";
-    std::array<char, 80> buffer;
-    std::vector<std::string> marks = {ram_total, ram, hard_volume, hard_ops, hard_throughput};
-    for (auto i : marks) {
-    FILE* pipe = popen(i.c_str(), "r+");
-    while (fgets(buffer.data(), 80, pipe) != nullptr)
-        myfile << buffer.data();
-    pclose(pipe);
+   double s21::Model::cpu_load() {
+    std::string command = "bash -c 'top -bn1 | grep \"Cpu(s)\" | sed \"s/.*, *\\([0-9.]*\\)%* id.*/\\1/\"'";
+    std::string cores_command = "bash -c 'grep -c ^processor /proc/cpuinfo'";
+    std::string output = "";
+    std::string cores_output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+      throw std::runtime_error("popen() failed!");
     }
-    myfile.close();
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+        output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
   }
+
+  int s21::Model::number_of_processes() {
+    std::string command = "bash -c 'ps aux | wc -l'";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+        output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
+  }
+
+  // void s21::Model::download_file_with_marks_memory() {
+  //   std::fstream myfile;
+  //   myfile.open ("text.txt", std::ios_base::app);
+  //   std::string ram_total = "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}' \n";
+  //   std::string ram = " ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }' \n";
+  //   std::string hard_volume = " df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3 \n";
+  //   std::string hard_ops = "iostat -c 1 -w 10 disk0 | awk '{print $1}'| tail -1 \n";
+  //   std::string hard_throughput = "iostat -c 1 -w 10 disk3 | awk '{print $1}'| tail -1";
+  //   std::array<char, 80> buffer;
+  //   std::vector<std::string> marks = {ram_total, ram, hard_volume, hard_ops, hard_throughput};
+  //   for (auto i : marks) {
+  //   FILE* pipe = popen(i.c_str(), "r+");
+  //   while (fgets(buffer.data(), 80, pipe) != nullptr)
+  //     myfile << buffer.data();
+  //   pclose(pipe);
+  //   }
+  //   myfile.close();
+  // }
   
   vector<double> s21::Model::starting_memory_agent(bool check) {
-    std::vector<double> v {0}; //Вектор строк
+    std::vector<double> result;
     if(check) {
-      std::cout << "\nTR_2_ID: " << std::this_thread::get_id() << std::endl; // ID потока
-      download_file_with_marks_memory(); 
-      std::ifstream file("text.txt");
-      std::string S;  //Считываемое слово из файла
-      while(std::getline(file, S)) { 
-        v.push_back(atof(S.data()));  //Считывание в вектор с указанием разделителя
-      }
-//    for (unsigned int i=0;i<v.size();i++) std::cout<<v.at(i)<<" "; //Вывод вектора на экран
+      std::cout << "\nTR_2_ID: " << std::this_thread::get_id() << std::endl;
+      double ram_total = this->ram_total();
+      double ram = this->ram();
+      double hard_volume = this->hard_volume();
+      double hard_ops = this->hard_ops();
+      double hard_throughput = this->hard_throughput();
+      result.push_back(ram_total);
+      result.push_back(ram);
+      result.push_back(hard_volume);
+      result.push_back(hard_ops);
+      result.push_back(hard_throughput);
     }
-    return v;
+    // for(auto&&i : result) {
+    //   std::cout << i << std::endl;
+    // }
+    return result;
+  }
+
+  double s21::Model::ram_total() {
+    std::string command = "bash -c 'free -m | awk '/Mem:/ {print $2}''";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+      throw std::runtime_error("popen() failed!");
+    }
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+        output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
+  }
+
+  double s21::Model::ram() {
+    std::string command = "bash -c 'free -m | awk '/Mem:/ {print 100 - $4*100/$2}''";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+      throw std::runtime_error("popen() failed!");
+    }
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+        output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
+  }
+
+  double s21::Model::hard_volume() {
+    std::string command = "bash -c 'df -h | awk '/[0-9]%/{print $(NF-1)}''";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+      throw std::runtime_error("popen() failed!");
+    }
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+          output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
+  }
+
+  double s21::Model::hard_ops() {
+    std::string command = "bash -c 'iostat -d -k | awk '/sda/ {print $3}''";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+          output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
+  }
+
+  double s21::Model::hard_throughput() {
+    std::string command = "bash -c 'iostat -d -k | awk '/sda/ {print $4}''";
+    std::string output = "";
+    char buffer[128];
+    std::FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+      throw std::runtime_error("popen() failed!");
+    }
+    while (!std::feof(pipe)) {
+      if (std::fgets(buffer, 128, pipe) != NULL)
+        output += buffer;
+    }
+    pclose(pipe);
+    return std::stod(output);
   }
 
   std::pair<bool, double> s21::Model::starting_network_agent(std::string url, bool check) {
@@ -96,16 +203,6 @@
   }
 
   double s21::Model::speed_network() {
-    // std::string script = "speedtest | awk '/Download:/ { print $2 }' >> temp_file_9.conf";
-    // std::system(script.data());
-    // std::string lineptr;
-    // std::ifstream temp_file("temp_file_9.conf");
-    // if (!temp_file.eof()) {
-    //   std::getline(temp_file, lineptr);
-    // }
-    // temp_file.close();
-    // std::system("rm temp_file_9.conf");
-    // return atof(lineptr.data());
     std::string command = "bash -c 'cat /proc/net/dev'";
     std::string output = "";
     char buffer[128];
@@ -117,9 +214,8 @@
         if (std::fgets(buffer, 128, pipe) != NULL)
             output += buffer;
     }
-    std::pclose(pipe);
+    pclose(pipe);
 
-    // Extract the interface name and bandwidth
     std::smatch match;
     std::regex pattern("[a-z]+:\\s+(\\d+)\\s+(\\d+)");
     double inet_through = 0;
@@ -133,19 +229,6 @@
   }
 
   void s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {
-    // if(cpu) {
-    //   std::thread thread_1([this](){this->starting_cpu_agent();});
-    //   std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-    //   thread_1.detach();
-    // }
-    // if(memory) {
-    //   std::thread thread_2([this](){this->starting_memory_agent();});
-    //   thread_2.detach();
-    // }
-    // if(network) {
-    //   std::thread thread_3([this, url](){this->starting_network_agent(url.data());});
-    //   thread_3.join();
-    // }
       std::vector<double> result;
       std::thread thread_1([this, cpu](){
         this->starting_cpu_agent(cpu);
