@@ -89,7 +89,7 @@
 
   double s21::Model::ram_total() {
     std::string command = "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}'";
-    std::string output = "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
+    std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
     if (!pipe) {
@@ -104,7 +104,7 @@
   }
 
   double s21::Model::ram() {
-    std::string command = "bash -c 'free -m | awk '/Mem:/ {print 100 - $4*100/$2}''";
+    std::string command = "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
@@ -201,7 +201,7 @@
   }
 
   double s21::Model::speed_network() {
-    std::string command = "netstat -bI en0 | grep -E ""en0|Bytes"" | grep -v ""Refs"" | awk '{print $7}'";
+    std::string command = "netstat -bI en0 | grep -E \"en0|Bytes\" | grep -v \"Refs\" | awk '{print $7}' | tail -1";
     std::string output = "";
     char buffer[128];
     std::FILE *pipe = popen(command.c_str(), "r");
@@ -242,4 +242,4 @@
       thread_1.join();
       thread_2.join();
       thread_3.join();
-  }
+   }
