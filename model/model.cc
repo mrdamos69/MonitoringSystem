@@ -40,12 +40,6 @@
     return starting_network_agent(url, check);
   }
 
-  void s21::Model::uploading_data_to_file(const std::vector<double>& data1,
-                                          const std::vector<double>& data2,
-                                          std::pair<bool, double> config) {
-  uploading_data_to_file(data1, data2, config); 
-  }
-
   bool s21::Model::validation_url(std::string url) {
     return validation_url(url);
   }
@@ -54,20 +48,3 @@
     return speed_network();
   }
 
-  void s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {
-      std::vector<double> result;
-      std::thread thread_1([this, cpu](){
-        this->starting_cpu_agent(cpu);
-      });
-
-      std::thread thread_2([this, memory](){
-        this->starting_memory_agent(memory);
-      });
-
-      std::thread thread_3([this, url, network](){
-        this->starting_network_agent(url.data(), network);
-      });
-      thread_1.join();
-      thread_2.join();
-      thread_3.join();
-   }

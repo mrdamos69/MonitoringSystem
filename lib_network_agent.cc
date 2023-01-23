@@ -12,24 +12,6 @@
 #include <thread>
 #include <vector>
 
-void uploading_data_to_file(const std::vector<double> &data1,
-                            const std::vector<double> &data2,
-                            std::pair<bool, double> config) {
-  std::ofstream file("config.conf");
-  file << "Data1:" << std::endl;
-  for (double d : data1) {
-    file << d << std::endl;
-  }
-  file << "Data2:" << std::endl;
-  for (double d : data2) {
-    file << d << std::endl;
-  }
-  file << "Configuration:" << std::endl;
-  file << "Option: " << config.first << std::endl;
-  file << "Value: " << config.second << std::endl;
-  file.close();
-}
-
 std::string validation_url(std::string url) {
   std::string command =
       "curl -I " + url + " -o /dev/null -s -w '%{http_code}\n'";
@@ -52,17 +34,6 @@ double speed_network() {
       output += buffer;
   }
   pclose(pipe);
-  //   std::smatch match;
-  //   std::regex pattern("[a-z]+:\\s+(\\d+)\\s+(\\d+)");
-  //   double inet_through = 0;
-  //   while (std::regex_search(output, match, pattern)) {
-  //     double rx = std::stod(match[1]);
-  //     double tx = std::stod(match[2]);
-  //     inet_through += rx + tx;
-  //     output = match.suffix().str();
-  //   }
-  //   return inet_through;
-  //   std::cout << output << std::endl;
   return std::stod(output) / 1024 / 1024 / 1024;
 }
 
