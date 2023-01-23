@@ -8,3 +8,11 @@
 
 
 9:33:49 | cpu : 2.000000 | processes : 386
+
+
+
+9:52:45 | cpu : 4.000000 | processes : 384
+9:52:47 | https://edu.21-school.ru : available | inet_throughput : 714537.000000
+
+10:5:23 | cpu : 8.000000 | processes : 385
+10:5:25 | https://edu.21-school.ru : available | inet_throughput : 738767.000000

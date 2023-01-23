@@ -11,7 +11,7 @@
 
 TEST(Test_Monitoring_system, test_starting_agents) {
   s21::Model model;
-  model.starting_agents(1, 0, 0, "https://edu.21-school.ru");
+  model.starting_agents(1, 0, 1, "https://edu.21-school.ru");
 }
 
 int main(int argc, char *argv[]) {

@@ -8,9 +8,13 @@ std::string validation_url(std::string url) {
 }
 
 double speed_network() {
-  std::string s1 = "netstat -bI en0 | grep -E \"en0|Bytes\" | grep -v \"Refs\" "
-                   "| awk '{print $7}' | tail -1";
-  std::string command = s1;
+  std::string command;
+  if(SYSTEM_CHECK) {
+    command = "netstat -bI en0 | grep -E \"en0|Bytes\" | grep -v \"Refs\" "
+              "| awk '{print $7}' | tail -1";
+  } else {
+    command = "bash -c 'cat /proc/net/dev'";
+  }
   std::string output = "";
   char buffer[128];
   std::FILE *pipe = popen(command.c_str(), "r");
@@ -22,7 +26,19 @@ double speed_network() {
       output += buffer;
   }
   pclose(pipe);
-  return std::stod(output) / 1024 / 1024 / 1024;
+  if(SYSTEM_CHECK) {
+    return std::stod(output) / 1024 / 1024 / 1024;
+  }
+  std::smatch match;
+  std::regex pattern("[a-z]+:\\s+(\\d+)\\s+(\\d+)");
+  double inet_through = 0;
+  while (std::regex_search(output, match, pattern)) {
+      double rx = std::stod(match[1]);
+      double tx = std::stod(match[2]);
+      inet_through += rx + tx;
+      output = match.suffix().str();
+  }
+  return inet_through;
 }
 
 void network_agent(std::string url, bool check) {
