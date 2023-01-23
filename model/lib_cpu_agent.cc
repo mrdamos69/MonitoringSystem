@@ -1,16 +1,4 @@
-#include "utils.h"
-#include <array>
-#include <chrono>
-#include <cstdio>
-#include <ctime>
-#include <fstream>
-#include <iostream>
-#include <math.h>
-#include <mutex>
-#include <regex>
-#include <string>
-#include <thread>
-#include <vector>
+#include "lib_agents.h"
 
 double cpu_load() {
   std::string command =
@@ -45,7 +33,7 @@ int number_of_processes() {
   return std::stod(output);
 }
 
-void starting_cpu_agent(bool check) {
+void cpu_agent(bool check) {
   std::string result;
   if (check) {
     double cpu_usage = cpu_load();

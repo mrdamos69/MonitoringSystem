@@ -13,6 +13,7 @@
 #include <string>
 #include <thread>
 #include <vector>
+
 void input_file(std::string text);
 std::string get_time();
 

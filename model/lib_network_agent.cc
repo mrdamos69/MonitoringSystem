@@ -1,22 +1,10 @@
-#include "utils.h"
-#include <array>
-#include <chrono>
-#include <cstdio>
-#include <ctime>
-#include <fstream>
-#include <iostream>
-#include <math.h>
-#include <mutex>
-#include <regex>
-#include <string>
-#include <thread>
-#include <vector>
+#include "lib_agents.h"
 
 std::string validation_url(std::string url) {
   std::string command =
       "curl -I " + url + " -o /dev/null -s -w '%{http_code}\n'";
   int status = std::system(command.c_str());
-  return (status == 0 ? "available" : " not available");
+  return (status == 0 ? "available" : "not available");
 }
 
 double speed_network() {
@@ -37,7 +25,7 @@ double speed_network() {
   return std::stod(output) / 1024 / 1024 / 1024;
 }
 
-void starting_network_agent(std::string url, bool check) {
+void network_agent(std::string url, bool check) {
   std::string result;
   if (check) {
     double speed_network_ = speed_network();

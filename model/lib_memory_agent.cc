@@ -1,16 +1,4 @@
-#include "utils.h"
-#include <array>
-#include <chrono>
-#include <cstdio>
-#include <ctime>
-#include <fstream>
-#include <iostream>
-#include <math.h>
-#include <mutex>
-#include <regex>
-#include <string>
-#include <thread>
-#include <vector>
+#include "lib_agents.h"
 
 double ram_total() {
   std::string command =
@@ -95,7 +83,7 @@ double hard_throughput() {
   return std::stod(output);
 }
 
-void starting_memory_agent(bool check) {
+void memory_agent(bool check) {
   std::string result = "";
   if (check) {
     double ram_total_ = ram_total();
