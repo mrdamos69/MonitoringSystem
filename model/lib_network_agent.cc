@@ -9,7 +9,7 @@ std::string validation_url(std::string url) {
 
 double speed_network() {
   std::string command;
-  if(SYSTEM_CHECK) {
+  if (SYSTEM_CHECK) {
     command = "netstat -bI en0 | grep -E \"en0|Bytes\" | grep -v \"Refs\" "
               "| awk '{print $7}' | tail -1";
   } else {
@@ -26,29 +26,32 @@ double speed_network() {
       output += buffer;
   }
   pclose(pipe);
-  if(SYSTEM_CHECK) {
+  if (SYSTEM_CHECK) {
     return std::stod(output) / 1024 / 1024 / 1024;
   }
   std::smatch match;
   std::regex pattern("[a-z]+:\\s+(\\d+)\\s+(\\d+)");
   double inet_through = 0;
   while (std::regex_search(output, match, pattern)) {
-      double rx = std::stod(match[1]);
-      double tx = std::stod(match[2]);
-      inet_through += rx + tx;
-      output = match.suffix().str();
+    double rx = std::stod(match[1]);
+    double tx = std::stod(match[2]);
+    inet_through += rx + tx;
+    output = match.suffix().str();
   }
   return inet_through;
 }
 
-void network_agent(std::string url, bool check) {
+std::vector<std::string> network_agent(std::string url, bool check) {
   std::string result;
+  double speed_network_ = speed_network();
+  std::string url_ = validation_url(url);
+  std::vector<std::string> res_vector;
   if (check) {
-    double speed_network_ = speed_network();
-    // std::cout << speed_network_ << std::endl;
-    std::string url_ = validation_url(url);
     result = get_time() + " | " + url + " : " + url_ + " | " +
              "inet_throughput" + " : " + std::to_string(speed_network_);
+    input_file(result);
   }
-  input_file(result);
+  res_vector.push_back(validation_url(url));
+  res_vector.push_back(std::to_string(speed_network_));
+  return res_vector;
 }

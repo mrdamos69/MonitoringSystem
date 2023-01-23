@@ -10,11 +10,11 @@ namespace s21 {
 class Model {
  public:
   Model() {};
-  void starting_cpu_agent(bool check);
-  void starting_memory_agent(bool check);
-  void starting_network_agent(std::string url, bool check);
+  std::vector<std::string> starting_cpu_agent(bool check);
+  std::vector<std::string> starting_memory_agent(bool check);
+  std::vector<std::string> starting_network_agent(std::string url, bool check);
 
-  void starting_agents(bool cpu, bool memory, bool network, std::string url);
+  std::vector<std::string> starting_agents(bool cpu, bool memory, bool network, std::string url);
 };
 }  // namespace s21
 

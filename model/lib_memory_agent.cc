@@ -2,8 +2,9 @@
 
 double ram_total() {
   std::string command;
-  if(SYSTEM_CHECK) {
-    command = "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}'";
+  if (SYSTEM_CHECK) {
+    command = "system_profiler SPHardwareDataType | grep \"Memory\" | awk "
+              "'{print $2}'";
   } else {
     command = "grep MemTotal /proc/meminfo | awk '{print $2}'";
   }
@@ -23,8 +24,9 @@ double ram_total() {
 
 double ram() {
   std::string command;
-  if(SYSTEM_CHECK) {
-    command = "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
+  if (SYSTEM_CHECK) {
+    command =
+        "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
   } else {
     command = "free | awk 'FNR == 2 {print $3/$2 * 100.0}'";
   }
@@ -44,8 +46,9 @@ double ram() {
 
 double hard_volume() {
   std::string command;
-  if(SYSTEM_CHECK) {
-    command = "df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3";
+  if (SYSTEM_CHECK) {
+    command =
+        "df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3";
   } else {
     command = "df -h / | tail -n 1 | awk '{print $5}' | tr -d '%'";
   }
@@ -65,7 +68,7 @@ double hard_volume() {
 
 double hard_ops() {
   std::string command;
-  if(SYSTEM_CHECK) {
+  if (SYSTEM_CHECK) {
     command = "iostat -c 1 -w 10 disk0 | awk '{print $1}'| tail -1";
   } else {
     command = "iostat -d -k -x 1 1 | awk 'FNR == 4 {print $6}'";
@@ -86,7 +89,7 @@ double hard_ops() {
 
 double hard_throughput() {
   std::string command;
-  if(SYSTEM_CHECK) {
+  if (SYSTEM_CHECK) {
     command = "iostat -c 1 -w 10 disk3 | awk '{print $1}'| tail -1";
   } else {
     command = "iostat -dx | grep 'nvme0n1' | awk '{print $6}'";
@@ -105,20 +108,27 @@ double hard_throughput() {
   return std::stod(output);
 }
 
-void memory_agent(bool check) {
+std::vector<std::string> memory_agent(bool check) {
   std::string result = "";
+  std::vector<std::string> res_vector;
+  double ram_total_ = ram_total();
+  double ram_ = ram();
+  double hard_volume_ = hard_volume();
+  double hard_ops_ = hard_ops();
+  double hard_throughput_ = hard_throughput();
   if (check) {
-    double ram_total_ = ram_total();
-    double ram_ = ram();
-    double hard_volume_ = hard_volume();
-    double hard_ops_ = hard_ops();
-    double hard_throughput_ = hard_throughput();
     result = get_time() + " | " + "ram_total" + " : " +
              std::to_string(ram_total_) + " | " + "ram" + " : " +
              std::to_string(ram_) + " | " + "hard_volume" + " : " +
              std::to_string(hard_volume_) + " | " + "hard_ops" + " : " +
              std::to_string(hard_ops_) + " | " + "hard_throughput" + " : " +
              std::to_string(hard_throughput_);
+    input_file(result);
   }
-  input_file(result);
+  res_vector.push_back(std::to_string(ram_total_));
+  res_vector.push_back(std::to_string(ram_));
+  res_vector.push_back(std::to_string(hard_volume_));
+  res_vector.push_back(std::to_string(hard_ops_));
+  res_vector.push_back(std::to_string(hard_throughput_));
+  return res_vector;
 }
