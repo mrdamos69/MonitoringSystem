@@ -1,8 +1,12 @@
 #include "lib_agents.h"
 
 double ram_total() {
-  std::string command =
-      "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}'";
+  std::string command;
+  if(SYSTEM_CHECK) {
+    command = "system_profiler SPHardwareDataType | grep \"Memory\" | awk '{print $2}'";
+  } else {
+    command = "grep MemTotal /proc/meminfo | awk '{print $2}'";
+  }
   std::string output = "";
   char buffer[128];
   std::FILE *pipe = popen(command.c_str(), "r");
@@ -18,8 +22,12 @@ double ram_total() {
 }
 
 double ram() {
-  std::string command =
-      "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
+  std::string command;
+  if(SYSTEM_CHECK) {
+    command = "ps -caxm -orss= | awk '{ sum += $1 } END { print sum/1024/1024 }'";
+  } else {
+    command = "free | awk 'FNR == 2 {print $3/$2 * 100.0}'";
+  }
   std::string output = "";
   char buffer[128];
   std::FILE *pipe = popen(command.c_str(), "r");
@@ -35,8 +43,12 @@ double ram() {
 }
 
 double hard_volume() {
-  std::string command =
-      "df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3";
+  std::string command;
+  if(SYSTEM_CHECK) {
+    command = "df -H | awk '{ sum = /\\/dev\\/disk3/ } END {print $3}' | cut -c 1-3";
+  } else {
+    command = "df -h / | tail -n 1 | awk '{print $5}' | tr -d '%'";
+  }
   std::string output = "";
   char buffer[128];
   std::FILE *pipe = popen(command.c_str(), "r");
@@ -52,7 +64,12 @@ double hard_volume() {
 }
 
 double hard_ops() {
-  std::string command = "iostat -c 1 -w 10 disk0 | awk '{print $1}'| tail -1";
+  std::string command;
+  if(SYSTEM_CHECK) {
+    command = "iostat -c 1 -w 10 disk0 | awk '{print $1}'| tail -1";
+  } else {
+    command = "iostat -d -k -x 1 1 | awk 'FNR == 4 {print $6}'";
+  }
   std::string output = "";
   char buffer[128];
   std::FILE *pipe = popen(command.c_str(), "r");
@@ -68,7 +85,12 @@ double hard_ops() {
 }
 
 double hard_throughput() {
-  std::string command = "iostat -c 1 -w 10 disk3 | awk '{print $1}'| tail -1";
+  std::string command;
+  if(SYSTEM_CHECK) {
+    command = "iostat -c 1 -w 10 disk3 | awk '{print $1}'| tail -1";
+  } else {
+    command = "iostat -dx | grep 'nvme0n1' | awk '{print $6}'";
+  }
   std::string output = "";
   char buffer[128];
   std::FILE *pipe = popen(command.c_str(), "r");
