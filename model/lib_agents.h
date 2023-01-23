@@ -1,5 +1,14 @@
 #ifndef LIB_AGENTS_H_
 #define LIB_AGENTS_H_
+
+#ifdef __APPLE__
+#define SYSTEM_CHECK 1
+#endif  // __APPLE__
+
+#ifdef __linux__
+#define SYSTEM_CHECK 0
+#endif  // __linux__
+
 #include "utils.h"
 #include <array>
 #include <chrono>
@@ -29,4 +38,5 @@ void cpu_agent(bool check);
 void memory_agent(bool check);
 void network_agent(std::string url, bool check);
 void starting_agents_thread(bool cpu, bool memory, bool network, std::string url);
-#endif
+
+#endif  // LIB_AGENTS_H_
