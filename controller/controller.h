@@ -10,11 +10,11 @@ class Controller {
   s21::Model model;
 
  public:
-  void starting_cpu_agent(bool check);
+  std::vector<std::string> starting_cpu_agent(bool check);
 
-  void starting_memory_agent(bool check);
+  std::vector<std::string> starting_memory_agent(bool check);
 
-  void starting_network_agent(std::string url, bool check);
+  std::vector<std::string> starting_network_agent(std::string url, bool check);
 
 };
 

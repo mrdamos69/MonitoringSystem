@@ -10,8 +10,12 @@
 // }
 
 TEST(Test_Monitoring_system, test_starting_agents) {
-  s21::Model model;
-  model.starting_agents(1, 1, 1, "https://edu.21-school.ru");
+  s21::Model model; 
+  std::vector<std::string> result;
+  result = model.starting_agents(1, 1, 1, "https://edu.21-school.ru");
+  for (auto i : result) {
+    std::cout << i << std::endl;
+  }
 }
 
 int main(int argc, char *argv[]) {

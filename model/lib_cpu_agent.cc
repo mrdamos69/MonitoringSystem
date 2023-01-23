@@ -2,10 +2,11 @@
 
 double cpu_load() {
   std::string command;
-  if(SYSTEM_CHECK) {
+  if (SYSTEM_CHECK) {
     command = "top -l 1 | grep -E \"^CPU\" | awk '{print $3}' | cut -c 1-4";
   } else {
-    command = "bash -c 'top -bn1 | grep \"Cpu(s)\" | sed \"s/.*, *\\([0-9.]*\\)%* id.*/\\1/\"'";
+    command = "bash -c 'top -bn1 | grep \"Cpu(s)\" | sed \"s/.*, "
+              "*\\([0-9.]*\\)%* id.*/\\1/\"'";
   }
   std::string output = "";
   char buffer[128];
@@ -23,7 +24,7 @@ double cpu_load() {
 
 int number_of_processes() {
   std::string command;
-  if(SYSTEM_CHECK) {
+  if (SYSTEM_CHECK) {
     command = "ps -e | wc -l | cut -c 6-8";
   } else {
     command = "bash -c 'ps aux | wc -l'";
@@ -42,13 +43,18 @@ int number_of_processes() {
   return std::stod(output);
 }
 
-void cpu_agent(bool check) {
+std::vector<std::string> cpu_agent(bool check) {
   std::string result;
+  double cpu_usage = cpu_load();
+  int processes = number_of_processes();
+  std::vector<std::string> res_vector;
   if (check) {
-    double cpu_usage = cpu_load();
-    int processes = number_of_processes();
     result = get_time() + " | " + "cpu" + " : " + std::to_string(cpu_usage) +
              " | " + "processes" + " : " + std::to_string(processes);
+    input_file(result);
+    std::vector<std::string> res_vector;
+    res_vector.push_back(std::to_string(cpu_usage));
+    res_vector.push_back(std::to_string(processes));
   }
-  input_file(result);
+  return res_vector;
 }

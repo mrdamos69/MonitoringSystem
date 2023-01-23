@@ -34,9 +34,9 @@ std::string validation_url(std::string url);
 double speed_network();
 void input_file(std::string text);
 
-void cpu_agent(bool check);
-void memory_agent(bool check);
-void network_agent(std::string url, bool check);
-void starting_agents_thread(bool cpu, bool memory, bool network, std::string url);
+std::vector<std::string> cpu_agent(bool check);
+std::vector<std::string> memory_agent(bool check);
+std::vector<std::string> network_agent(std::string url, bool check);
+std::vector<std::string> starting_agents_thread(bool cpu, bool memory, bool network, std::string url);
 
 #endif  // LIB_AGENTS_H_
