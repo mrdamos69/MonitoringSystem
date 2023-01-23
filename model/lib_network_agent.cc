@@ -3,8 +3,18 @@
 std::string validation_url(std::string url) {
   std::string command =
       "curl -I " + url + " -o /dev/null -s -w '%{http_code}\n'";
-  int status = std::system(command.c_str());
-  return (status == 0 ? "available" : "not available");
+   std::string output = "";
+  char buffer[128];
+  std::FILE *pipe = popen(command.c_str(), "r");
+  if (!pipe) {
+    throw std::runtime_error("popen() failed!");
+  }
+  while (!std::feof(pipe)) {
+    if (std::fgets(buffer, 128, pipe) != NULL)
+      output += buffer;
+  }
+  pclose(pipe);
+  return (std::stod(output) == 200 ? "available" : "not available");
 }
 
 double speed_network() {

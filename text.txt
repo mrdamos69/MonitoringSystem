@@ -8,3 +8,12 @@
 15:42:17 | cpu : 8.420000 | processes : 468
 15:42:17 | ram_total : 16.000000 | ram : 11.528200 | hard_volume : 4.200000 | hard_ops : 42.870000 | hard_throughput : 80.920000
 15:42:17 | https://edu.21-school.ru : available | inet_throughput : 17.984125
+16:10:21 | cpu : 10.100000 | processes : 474
+16:10:21 | ram_total : 16.000000 | ram : 11.875900 | hard_volume : 4.200000 | hard_ops : 42.740000 | hard_throughput : 79.290000
+16:10:26 | https://edu.21-school.ru : available | inet_throughput : 17.991363
+16:10:46 | cpu : 6.250000 | processes : 473
+16:10:46 | ram_total : 16.000000 | ram : 11.860200 | hard_volume : 4.200000 | hard_ops : 42.740000 | hard_throughput : 79.270000
+16:10:46 | https://edu.21-school.ru : available | inet_throughput : 17.991415
+16:16:40 | cpu : 26.600000 | processes : 484
+16:16:40 | ram_total : 16.000000 | ram : 11.895200 | hard_volume : 4.200000 | hard_ops : 42.700000 | hard_throughput : 78.970000
+16:16:41 | https://edu.21-school.ru : available | inet_throughput : 17.991826
