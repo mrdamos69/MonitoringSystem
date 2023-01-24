@@ -1,21 +1,23 @@
 #include "model.h"
 
-std::vector<std::string> s21::Model::starting_cpu_agent(bool check) {
-  return cpu_agent(check);
+std::vector<std::string> s21::Model::starting_cpu_agent() {
+  return cpu_agent();
 }
 
-std::vector<std::string> s21::Model::starting_memory_agent(bool check) {
-  return memory_agent(check);
+std::vector<std::string> s21::Model::starting_memory_agent() {
+  return memory_agent();
 }
 
-std::vector<std::string> s21::Model::starting_network_agent(std::string url, bool check) {
-  return network_agent(url, check);
+std::vector<std::string> s21::Model::starting_network_agent(std::string url) {
+  return network_agent(url);
 }
 
-std::vector<std::string> s21::Model::starting_special_agent(std::string lvl_privilege, bool check) {
-  return special_agent(lvl_privilege, check);
+std::vector<std::string>
+s21::Model::starting_special_agent(std::string lvl_privilege) {
+  return special_agent(lvl_privilege);
 }
 
-std::vector<std::string> s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {
-  return starting_agents_thread(cpu, memory, network, url);
+std::vector<std::string>
+s21::Model::starting_agents_thread(std::string lvl_privilege, std::string url) {
+  return starting_agents(lvl_privilege, url);
 }
