@@ -1,7 +1,7 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "lib_agents.h"
+#include "agents/lib_agents.h"
 
 using std::string;
 using std::vector;

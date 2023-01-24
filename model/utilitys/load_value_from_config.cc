@@ -4,7 +4,7 @@
 #include <vector>
 #include <typeinfo>
 #include <cstdlib>
-#include "lib_agents.h"
+#include "../agents/lib_agents.h"
 
 std::vector<std::string> load_value_from_config() {
   std::ifstream file("config.conf");
@@ -21,7 +21,7 @@ std::vector<int> get_metric_from_file() {
   std::vector<std::string> lines = load_value_from_config();
   std::string temp = "";
   std::vector<int> result;
-  
+
   for (auto i = 4; i < 31; i++) {
     std::string vector_res = lines[i];
     auto found = vector_res.find_first_of("0123456789");

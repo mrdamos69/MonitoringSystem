@@ -5,11 +5,11 @@ FLAG_C = -c
 CL_11 = -std=c++17 -Wall -Wextra -Werror
 PR_NAME = s21_Monitoring_system
 
-ALL_FILE_CC = ./model/model.cc ./model/lib_cpu_agent.cc ./model/lib_memory_agent.cc \
-./model/lib_network_agent.cc ./model/lib_start_agent.cc ./model/utils.cc ./controller/controller.cc \
-./model/load_value_from_config.cc ./model/lib_special_agent.cc
+ALL_FILE_CC = ./model/model.cc ./model/agents/lib_cpu_agent.cc ./model/agents/lib_memory_agent.cc \
+./model/agents/lib_network_agent.cc ./model/utilitys/lib_start_agent.cc ./model/utilitys/utils.cc ./controller/controller.cc \
+./model/utilitys/load_value_from_config.cc ./model/agents/lib_special_agent.cc
 
-ALL_FILE_H = ./model/model.h ./model/lib_agents.h ./model/utils.h ./controller/controller.h
+ALL_FILE_H = ./model/model.h ./model/agents/lib_agents.h ./model/utilitys/utils.h ./controller/controller.h
 ALL_FILE_O = model.o
 
 ifeq ($(OS), Darwin)
