@@ -12,6 +12,10 @@ std::vector<std::string> s21::Model::starting_network_agent(std::string url, boo
   return network_agent(url, check);
 }
 
+std::vector<std::string> s21::Model::starting_special_agent(std::string lvl_privilege, bool check) {
+  return special_agent(lvl_privilege, check);
+}
+
 std::vector<std::string> s21::Model::starting_agents(bool cpu, bool memory, bool network, std::string url) {
   return starting_agents_thread(cpu, memory, network, url);
 }

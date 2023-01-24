@@ -1,39 +1,5 @@
 #include "lib_agents.h"
 
-// echo "[double] загрузка процессора по уровням привилегий(cpu_idle_usage, cpu_user_usage, ...): "
-// echo "cpu_idle_usage: $(iostat | awk '{print $9}' | tail -n +3)"
-// echo "cpu_system_usage: $(iostat | awk '{print $8}' | tail -n +3)"
-// echo "cpu_user_usage: $(iostat | awk '{print $7}' | tail -n +3)"
-
-// echo '\n'"[double] общий объем свопа/swap'а (total_swap): "
-// echo "total_swap: $(sysctl vm.swapusage | awk '{print $4}' | sed 's/.$//')"
-
-// echo '\n'"[double] используемый объем свопа/swap'а (used_swap): "
-// echo "used_swap: $(sysctl vm.swapusage | awk '{print $7}' | sed 's/.$//')"
-
-// echo '\n'"[int] количество готовых к выполнению процессов в очереди (при необходимости прочитать про состояния процессов в Unix) (proc_queue_length): "
-// echo "proc_queue_length: $(ps -e -o "stat" | tail -n +2 | grep S | wc -l | awk '$1=$1')"
-// echo "-- Использовал спящие процессы"
-
-// echo '\n'"[double] подсчет общей и свободной виртуальной памяти (virtual_mem_volume, virtual_mem_free): "
-// echo "virtual_mem_volume: $(df -h /System/Volumes/VM/ | awk '{print $2}' | tail -n +2 | sed 's/..$//')"
-// echo "virtual_mem_free: $(df -h /System/Volumes/VM/ | awk '{print $4}' | tail -n +2 | sed 's/..$//')"
-
-// echo '\n'"[int] общее число inode'ов (inodes): "
-// echo "inodes: $(df / | awk '{print $6}' | tail -n +2 | sed 's/.$//')"
-// echo "-- Показал использованный иноды диска / Чтобы можно было увидеть рост"
-
-// echo '\n'"[double] среднее время чтения с жесткого диска (hard_read_time): "
-// echo "hard_read_time: $(iostat | awk '{print $3}' | tail -n +3)"
-
-// echo '\n'"[int] число ошибок из системного журнала (system_errors): "
-// echo "system_errors: $(cat /var/log/system.log | grep error | wc -l | awk '$1=$1')"
-// echo "-- Этот журнал недоступен в школе"
-
-// echo '\n'"[int] количество авторизаций пользователей (user_auths): "
-// echo "user_auths: $(cat /var/log/storage-login.log | grep "Login as " | wc -l | awk '$1=$1')"
-// echo "-- Этот журнал доступен в школе"
-
 double cpu_load_privilege(std::string lvl_privilege) {
   std::string command;
   if (SYSTEM_CHECK) {
@@ -255,7 +221,7 @@ int number_of_user_authorizations() {
   return std::stod(output); 
 }
 
-std::vector<std::string> special_agent(bool check, std::string lvl_privilege) {
+std::vector<std::string> special_agent(std::string lvl_privilege, bool check) {
   std::string result = "";
   std::vector<std::string> res_vector;
 
