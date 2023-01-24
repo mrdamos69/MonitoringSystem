@@ -26,5 +26,7 @@ std::vector<std::string> starting_agents_thread(bool cpu, bool memory,
 
   thread_3.join();
 
+  
+
   return result;
 }
