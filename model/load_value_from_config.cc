@@ -1,10 +1,11 @@
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <typeinfo>
+// #include <fstream>
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include <typeinfo>
+#include "model.h"
 
-void get_value_from_config() {
+std::vector<int> s21::Model::load_value_from_config() {
   std::ifstream file("config.conf");
   std::string str;
 
@@ -51,7 +52,8 @@ void get_value_from_config() {
   // get_time
   result.push_back(stoi(lines[33].substr(8, 2)));
 
-  for (auto i : result) {
-      std::cout << i << std::endl;
-  }
+  // for (auto i : result) {
+  //     std::cout << i << std::endl;
+  // }
+  return result;
 }

@@ -6,7 +6,8 @@ CL_11 = -std=c++17 -Wall -Wextra -Werror
 PR_NAME = s21_Monitoring_system
 
 ALL_FILE_CC = ./model/model.cc ./model/lib_cpu_agent.cc ./model/lib_memory_agent.cc \
-./model/lib_network_agent.cc ./model/lib_start_agent.cc ./model/utils.cc ./controller/controller.cc
+./model/lib_network_agent.cc ./model/lib_start_agent.cc ./model/utils.cc ./controller/controller.cc \
+./model/load_value_from_config.cc ./model/lib_special_agent.cc
 
 ALL_FILE_H = ./model/model.h ./model/lib_agents.h ./model/utils.h ./controller/controller.h
 ALL_FILE_O = model.o
@@ -75,13 +76,11 @@ check:
 	@cd view && clang-format -i ./*.cpp ./*.h
 	@cd model && clang-format -i ./*.cc ./*.h ./*/*.cc ./*/*.h
 	@cd controller && clang-format -i ./*.cc ./*.h
-	@cd matrix_lib && clang-format -i ./*.cc ./*.h
 	@cd view && clang-format -i ./*.cpp ./*.h
   
 	@cd view && clang-format -n ./*.cpp ./*.h
 	@cd model && clang-format -n ./*.cc ./*.h */*.cc ./*/*.h
 	@cd controller && clang-format -n ./*.cc ./*.h
-	@cd matrix_lib && clang-format -n ./*.cc ./*.h
 	@cd view && clang-format -n ./*.cpp ./*.h
 
 cppcheck:
