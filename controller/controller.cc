@@ -11,6 +11,9 @@ std::vector<std::string> s21::Controller::starting_memory_agent(bool check) {
 std::vector<std::string> s21::Controller::starting_network_agent(std::string url, bool check) {
   return model.starting_network_agent(url, check);
 }
+std::vector<std::string> s21::Controller::starting_special_agent(std::string lvl_privilege, bool check) {
+  return model.starting_special_agent(lvl_privilege, check);
+}
 
 std::vector<int> s21::Controller::load_value_from_config() {
   return model.load_value_from_config();

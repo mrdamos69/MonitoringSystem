@@ -26,6 +26,14 @@ TEST(Test_Monitoring_system, test_network_agent) {
   }
 }
 
+// TEST(Test_Monitoring_system, test_special_agent) {
+//   s21::Model model;
+//   std::vector<std::string> result = model.starting_special_agent("cpu_idle_usage", true);
+//   for (auto i : result) {
+//     ASSERT_TRUE(!i.empty());
+//   }
+// }
+
 TEST(Test_Monitoring_system, test_starting_agents) {
   s21::Model model; 
   std::vector<std::string> result;
