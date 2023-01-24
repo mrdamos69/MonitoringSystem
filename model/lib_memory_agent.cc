@@ -108,7 +108,7 @@ double hard_throughput() {
   return std::stod(output);
 }
 
-std::vector<std::string> memory_agent(bool check) {
+std::vector<std::string> memory_agent() {
   std::string result = "";
   std::vector<std::string> res_vector;
   double ram_total_ = ram_total();
@@ -116,7 +116,6 @@ std::vector<std::string> memory_agent(bool check) {
   double hard_volume_ = hard_volume();
   double hard_ops_ = hard_ops();
   double hard_throughput_ = hard_throughput();
-  if (check) {
     result = get_time() + " | " + "ram_total" + " : " +
              std::to_string(ram_total_) + " | " + "ram" + " : " +
              std::to_string(ram_) + " | " + "hard_volume" + " : " +
@@ -124,7 +123,6 @@ std::vector<std::string> memory_agent(bool check) {
              std::to_string(hard_ops_) + " | " + "hard_throughput" + " : " +
              std::to_string(hard_throughput_);
     input_file(result);
-  }
   res_vector.push_back(std::to_string(ram_total_));
   res_vector.push_back(std::to_string(ram_));
   res_vector.push_back(std::to_string(hard_volume_));

@@ -221,7 +221,7 @@ int number_of_user_authorizations() {
   return std::stod(output); 
 }
 
-std::vector<std::string> special_agent(std::string lvl_privilege, bool check) {
+std::vector<std::string> special_agent(std::string lvl_privilege) {
   std::string result = "";
   std::vector<std::string> res_vector;
 
@@ -233,8 +233,6 @@ std::vector<std::string> special_agent(std::string lvl_privilege, bool check) {
   double free_virtual_memory_ = counting_full_and_free_virtual_memory().second;
   int total_number_of_inodes_ = total_number_of_inodes();
   double average_hard_disk_read_time_ = average_hard_disk_read_time();
-
-  if (check) {
     result = get_time() + " | " + "cpu_load_privilege" + " : " +
              std::to_string(cpu_load_privilege_) + " | " + "total_swap_volume" + " : " +
              std::to_string(total_swap_volume_) + " | " + "amount_of_swap_used" + " : " +
@@ -245,7 +243,6 @@ std::vector<std::string> special_agent(std::string lvl_privilege, bool check) {
              std::to_string(total_number_of_inodes_) + " | " + "average_hard_disk_read_time" + " : " +
              std::to_string(average_hard_disk_read_time_);
     input_file(result);
-  }
   res_vector.push_back(std::to_string(cpu_load_privilege_));
   res_vector.push_back(std::to_string(total_swap_volume_));
   res_vector.push_back(std::to_string(amount_of_swap_used_));

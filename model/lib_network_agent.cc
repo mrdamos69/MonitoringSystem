@@ -51,16 +51,14 @@ double speed_network() {
   return inet_through;
 }
 
-std::vector<std::string> network_agent(std::string url, bool check) {
+std::vector<std::string> network_agent(std::string url) {
   std::string result;
   double speed_network_ = speed_network();
   std::string url_ = validation_url(url);
   std::vector<std::string> res_vector;
-  if (check) {
     result = get_time() + " | " + url + " : " + url_ + " | " +
              "inet_throughput" + " : " + std::to_string(speed_network_);
     input_file(result);
-  }
   res_vector.push_back(validation_url(url));
   res_vector.push_back(std::to_string(speed_network_));
   return res_vector;

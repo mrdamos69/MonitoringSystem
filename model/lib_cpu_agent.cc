@@ -43,18 +43,15 @@ int number_of_processes() {
   return std::stod(output);
 }
 
-std::vector<std::string> cpu_agent(bool check) {
+std::vector<std::string> cpu_agent() {
   std::string result;
   double cpu_usage = cpu_load();
   int processes = number_of_processes();
   std::vector<std::string> res_vector;
-  if (check) {
     result = get_time() + " | " + "cpu" + " : " + std::to_string(cpu_usage) +
              " | " + "processes" + " : " + std::to_string(processes);
     input_file(result);
-    std::vector<std::string> res_vector;
     res_vector.push_back(std::to_string(cpu_usage));
     res_vector.push_back(std::to_string(processes));
-  }
   return res_vector;
 }
