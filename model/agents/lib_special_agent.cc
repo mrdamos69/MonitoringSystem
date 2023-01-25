@@ -11,11 +11,11 @@ double cpu_load_privilege(std::string lvl_privilege) {
       command = "iostat | awk '{print $7}' | tail -n +3";
   } else {
     if(lvl_privilege == "cpu_idle_usage")
-      command = "iostat | awk '{print $9}' | tail -n +3";
+      command = "mpstat -P ALL | grep 'all' | awk '{print $12}'";
     else if(lvl_privilege == "cpu_system_usage")
-      command = "iostat | awk '{print $8}' | tail -n +3";
+      command = "mpstat -P ALL | grep 'all' | awk '{print $5}'";
     else if(lvl_privilege == "cpu_user_usage")
-      command = "iostat | awk '{print $7}' | tail -n +3";
+      command = "mpstat -P ALL | grep 'all' | awk '{print $3}'";
   }
   std::string output = "";
   char buffer[128];
@@ -36,7 +36,7 @@ double total_swap_volume() {
   if (SYSTEM_CHECK) {
     command = "sysctl vm.swapusage | awk '{print $4}' | sed 's/.$//'";
   } else {
-    command = "sysctl vm.swapusage | awk '{print $4}' | sed 's/.$//'";
+    command = "free -m | grep 'Swap' | awk '{print $2}'";
   }
   std::string output = "";
   char buffer[128];
@@ -57,7 +57,7 @@ double amount_of_swap_used() {
   if (SYSTEM_CHECK) {
     command = "sysctl vm.swapusage | awk '{print $7}' | sed 's/.$//'";
   } else {
-    command = "sysctl vm.swapusage | awk '{print $7}' | sed 's/.$//'";
+    command = "free -m | grep 'Swap' | awk '{print $3}'";
   }
   std::string output = "";
   char buffer[128];
@@ -78,7 +78,7 @@ int number_of_processes_in_queue() {
   if (SYSTEM_CHECK) {
     command = "ps -e -o ""stat"" | tail -n +2 | grep S | wc -l | awk '$1=$1'";
   } else {
-    command = "ps -e -o ""stat"" | tail -n +2 | grep S | wc -l | awk '$1=$1'";
+    command = "vmstat 1 2 | awk '{if(NR==3) print $1}'";
   }
   std::string output = "";
   char buffer[128];
@@ -142,7 +142,7 @@ int total_number_of_inodes() {
   if (SYSTEM_CHECK) {
     command = "df / | awk '{print $6}' | tail -n +2 | sed 's/.$//'";
   } else {
-    command = "df / | awk '{print $6}' | tail -n +2 | sed 's/.$//'";
+    command = "df -i | awk '{total += $3} END {print total}'";
   }
   std::string output = "";
   char buffer[128];
@@ -163,7 +163,8 @@ double average_hard_disk_read_time() {
   if (SYSTEM_CHECK) {
     command = "iostat | awk '{print $3}' | tail -n +3";
   } else {
-    command = "iostat | awk '{print $3}' | tail -n +3";
+    command = "iostat -d -k /dev/sda | awk '{print $5}' | tail -n +4 | \
+    awk '{ sum += $1 } END { if (NR > 0) print sum / NR }'";
   }
   std::string output = "";
   char buffer[128];
@@ -184,7 +185,7 @@ int number_of_errors_from_the_system_log() {
   if (SYSTEM_CHECK) {
     command = "cat /var/log/system.log | grep error | wc -l | awk '$1=$1'";
   } else {
-    command = "cat /var/log/system.log | grep error | wc -l | awk '$1=$1'";
+    command = "grep -c ""error"" /var/log/syslog";
   }
   std::string output = "";
   char buffer[128];
@@ -205,7 +206,7 @@ int number_of_user_authorizations() {
   if (SYSTEM_CHECK) {
     command = "cat /var/log/storage-login.log | grep ""Login as "" | wc -l | awk '$1=$1'";
   } else {
-    command = "cat /var/log/storage-login.log | grep ""Login as "" | wc -l | awk '$1=$1'";
+    command = "last | echo ""$output"" | grep ""logged in"" | wc -l";
   }
   std::string output = "";
   char buffer[128];
