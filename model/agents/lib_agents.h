@@ -49,6 +49,6 @@ std::vector<std::string> memory_agent();
 std::vector<std::string> network_agent(std::string url);
 std::vector<std::string> special_agent(std::string lvl_privilege);
 std::vector<std::string> starting_agents(std::string lvl_privilege,
-                                         std::string url);
+                                         std::string url, int time);
 
 #endif // LIB_AGENTS_H_
