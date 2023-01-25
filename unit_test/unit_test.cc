@@ -1,34 +1,34 @@
 #include <gtest/gtest.h>
 
-#include "../model/model.h"
+#include "../controller/controller.h"
 
 TEST(Test_Monitoring_system, test_cpu_agent) {
-  s21::Model model;
-  std::vector<std::string> result = model.starting_cpu_agent();
+  s21::Controller controller;
+  std::vector<std::string> result = controller.starting_cpu_agent();
   for (auto i : result) {
     ASSERT_TRUE(!i.empty());
   }
 }
 
 TEST(Test_Monitoring_system, test_memory_agent) {
-  s21::Model model;
-  std::vector<std::string> result = model.starting_memory_agent();
+  s21::Controller controller;
+  std::vector<std::string> result = controller.starting_memory_agent();
   for (auto i : result) {
     ASSERT_TRUE(!i.empty());
   }
 }
 
 TEST(Test_Monitoring_system, test_network_agent) {
-  s21::Model model;
-  std::vector<std::string> result = model.starting_network_agent("https://edu.21-school.ru");
+  s21::Controller controller;
+  std::vector<std::string> result = controller.starting_network_agent("https://edu.21-school.ru");
   for (auto i : result) {
     ASSERT_TRUE(!i.empty());
   }
 }
 
 TEST(Test_Monitoring_system, test_special_agent) {
-  s21::Model model;
-  std::vector<std::string> result = model.starting_special_agent("cpu_idle_usage");
+  s21::Controller controller;
+  std::vector<std::string> result = controller.starting_special_agent("cpu_idle_usage");
   for (auto i : result) {
     ASSERT_TRUE(!i.empty());
   }
@@ -40,9 +40,9 @@ TEST(Test_Monitoring_system, test_load_config) {
 }
 
 TEST(Test_Monitoring_system, test_starting_agents) {
-  s21::Model model; 
+  s21::Controller controller;
   std::vector<std::string> result;
-  result = model.starting_agents_thread("cpu_idle_usage", "https://edu.21-school.ru");
+  result = controller.starting_agents_thread("cpu_idle_usage", "https://edu.21-school.ru", 5); // 5 секунд время работы функции
   for (auto i : result) {
     ASSERT_TRUE(!i.empty());
   }

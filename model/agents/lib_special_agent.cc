@@ -238,7 +238,8 @@ std::vector<std::string> special_agent(std::string lvl_privilege) {
              std::to_string(cpu_load_privilege_) + " | " + "total_swap_volume" + " : " +
              std::to_string(total_swap_volume_) + " | " + "amount_of_swap_used" + " : " +
              std::to_string(amount_of_swap_used_) + " | " + "number_of_processes_in_queue" + " : " +
-             std::to_string(number_of_processes_in_queue_) + " | " + "full_virtual_memory" + " : " +
+             std::to_string(number_of_processes_in_queue_) + "\n" + 
+             get_time() + " | " + "full_virtual_memory" + " : " +
              std::to_string(full_virtual_memory_) + " | " + "free_virtual_memory" + " : " +
              std::to_string(free_virtual_memory_) + " | " + "total_number_of_inodes" + " : " +
              std::to_string(total_number_of_inodes_) + " | " + "average_hard_disk_read_time" + " : " +
