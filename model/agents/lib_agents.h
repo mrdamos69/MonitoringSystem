@@ -1,6 +1,4 @@
-#ifndef LIB_AGENTS_H_
-#define LIB_AGENTS_H_
-
+#pragma once
 #ifdef __APPLE__
 #define SYSTEM_CHECK 1
 #endif // __APPLE__
@@ -22,33 +20,40 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <map>
 
-double cpu_load();
-int number_of_processes();
-double ram_total();
-double ram();
-double hard_volume();
-double hard_ops();
-double hard_throughput();
-std::string validation_url(std::string url);
-double speed_network();
-void input_file(std::string text);
-std::vector<std::string> load_value_from_config();
-std::vector<int> get_metric_from_file();
+static const std::vector<std::string> vec_operators{"<", "<=", "==", ">=", ">"};
+static const std::string alpha_num{"0123456789."};
 
-double cpu_load_privilege(std::string lvl_privilege);
-double total_swap_volume();
-double amount_of_swap_used();
-int number_of_processes_in_queue();
-std::pair<double, double> counting_full_and_free_virtual_memory();
-int total_number_of_inodes();
-double average_hard_disk_read_time();
+class Lib_agent {
+    public:
+        using monitor_metr = std::map<std::string, double>;
+        using config_t = std::map<std::string, std::pair<std::string, double>>;
+        
+        inline static monitor_metr      system_metrics;
+        inline static config_t          config_map;
 
-std::vector<std::string> cpu_agent();
-std::vector<std::string> memory_agent();
-std::vector<std::string> network_agent(std::string url);
-std::vector<std::string> special_agent(std::string lvl_privilege);
-std::vector<std::string> starting_agents(std::string lvl_privilege,
-                                         std::string url, int time);
+        static void read_conf();
+        static void starting_agents(std::string lvl_privilege, std::string url, int time);
 
-#endif // LIB_AGENTS_H_
+        void compare_maps();
+        
+        void check_metrics() {
+            for (auto it = system_metrics.begin(), ite = system_metrics.end(); it != ite; ++it) {
+                std::cout << (*it).first << " | " << (*it).second << std::endl;
+            }
+        }
+
+        void check_config() {
+            for (auto it = config_map.begin(), ite = config_map.end(); it != ite; ++it) {
+                std::cout << (*it).first << " | " << (*it).second.first << " | " << (*it).second.second << std::endl;
+            }
+        }
+        
+    private:
+        static void cpu_agent();
+        static void memory_agent();
+        static void network_agent(std::string& url);
+        static void special_agent(std::string& lvl_privilege);
+
+};
