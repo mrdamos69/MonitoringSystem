@@ -1,7 +1,7 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "lib_agents.h"
+#include "agents/lib_agents.h"
 
 using std::string;
 using std::vector;
@@ -16,7 +16,7 @@ public:
   std::vector<std::string> starting_special_agent(std::string lvl_privilege);
 
   std::vector<std::string> starting_agents_thread(std::string lvl_privilege,
-                                                  std::string url);
+                                                  std::string url, int time);
 };
 } // namespace s21
 

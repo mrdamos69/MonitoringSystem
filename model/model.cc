@@ -18,6 +18,6 @@ s21::Model::starting_special_agent(std::string lvl_privilege) {
 }
 
 std::vector<std::string>
-s21::Model::starting_agents_thread(std::string lvl_privilege, std::string url) {
-  return starting_agents(lvl_privilege, url);
+s21::Model::starting_agents_thread(std::string lvl_privilege, std::string url, int time) {
+  return starting_agents(lvl_privilege, url, time);
 }
