@@ -40,7 +40,7 @@ void bot_message(double &monitor, const std::string &fuck) {
   std::string command =
       "curl -s -d "
       "\"chat_id=2012446774&disable_web_page_preview=1&text=" +
-      std::string(hostname) + fuck + " " + std::to_string(monitor) +
+      std::string(hostname) + " " + fuck + " " + std::to_string(monitor) +
       "\" "
       "https://api.telegram.org/"
       "bot5693025715:AAHibzvbeGmTZXs8mnRejUB8JxrnqGVq6VU/sendMessage";
@@ -58,31 +58,31 @@ void bot_message(double &monitor, const std::string &fuck) {
 }
 
 void equal(double conf, double monitor, const std::string &metrics) {
-  if (conf != monitor) {
+  if (monitor != conf) {
     bot_message(monitor, metrics);
   }
 }
 
 void less(double conf, double monitor, const std::string &metrics) {
-  if (conf >= monitor) {
+  if (monitor >= conf) {
     bot_message(monitor, metrics);
   }
 }
 
 void great(double conf, double monitor, const std::string &metrics) {
-  if (conf <= monitor) {
+  if (monitor <= conf) {
     bot_message(monitor, metrics);
   }
 }
 
 void less_equal(double conf, double monitor, const std::string &metrics) {
-  if (conf > monitor) {
+  if (monitor > conf) {
     bot_message(monitor, metrics);
   }
 }
 
 void great_equal(double conf, double monitor, const std::string &metrics) {
-  if (conf < monitor) {
+  if (monitor < conf) {
     bot_message(monitor, metrics);
   }
 }
