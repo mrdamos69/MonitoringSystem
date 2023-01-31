@@ -34,15 +34,15 @@ public:
   inline static config_t config_map;
 
   static void read_conf();
-  static void starting_agents(std::string lvl_privilege, std::string url,
-                              int time);
+  static void starting_agents(std::string &lvl_privilege, std::string &url,
+                              int &time);
 
   void compare_maps();
 
   void check_metrics() {
     for (auto it = system_metrics.begin(), ite = system_metrics.end();
          it != ite; ++it) {
-      std::cout << (*it).first << " | " << (*it).second << std::endl;
+      std::cout << (*it).first << " | " << (*it).second << std::endl;  
     }
   }
 
@@ -54,7 +54,7 @@ public:
     }
   }
 
-private:
+public:
   static void cpu_agent();
   static void memory_agent();
   static void network_agent(std::string &url);

@@ -1,0 +1,96 @@
+9:28:4 | cpu : 5.210000 | processes : 494
+9:28:4 | ram_total : 16.000000 | ram : 13.468600 | hard_volume : 1.200000 | hard_ops : 57.080000 | hard_throughput : 47.170000
+9:28:4 | https://edu.21-school.ru : available | inet_throughput : 50.988153
+9:28:4 | cpu_load_privilege : 0.030000 | total_swap_volume : 0.000000 | amount_of_swap_used : 0.000000 | number_of_processes_in_queue : 482 | full_virtual_memory : 957.000000 | free_virtual_memory : 710.000000 | total_number_of_inodes : 55360 | average_hard_disk_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:28:6 | cpu : 8.750000 | processes : 494
+9:28:6 | ram_total : 16.000000 | ram : 13.468500 | hard_volume : 1.200000 | hard_ops : 57.080000 | hard_throughput : 47.170000
+9:28:6 | https://edu.21-school.ru : available | inet_throughput : 50.988161
+9:28:7 | cpu_load_privilege : 0.030000 | total_swap_volume : 0.000000 | amount_of_swap_used : 0.000000 | number_of_processes_in_queue : 479 | full_virtual_memory : 957.000000 | free_virtual_memory : 710.000000 | total_number_of_inodes : 55360 | average_hard_disk_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:30:24 | cpu : 5.470000 | processes : 493
+9:30:24 | ram_total : 16.000000 | ram : 13.529900 | hard_volume : 1.200000 | hard_ops : 57.060000 | hard_throughput : 46.980000
+9:30:24 | https://edu.21-school.ru : available | inet_throughput : 50.988480
+9:30:25 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 480 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:30:26 | cpu : 6.520000 | processes : 494
+9:30:27 | ram_total : 16.000000 | ram : 13.524300 | hard_volume : 1.200000 | hard_ops : 57.060000 | hard_throughput : 46.970000
+9:30:27 | https://edu.21-school.ru : available | inet_throughput : 50.988486
+9:30:27 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 479 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:35:50 | cpu : 5.250000 | processes : 493
+9:35:50 | ram_total : 16.000000 | ram : 13.617000 | hard_volume : 1.200000 | hard_ops : 57.010000 | hard_throughput : 46.670000
+9:35:50 | https://edu.21-school.ru : available | inet_throughput : 50.988976
+9:35:51 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 480 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:35:53 | cpu : 7.600000 | processes : 493
+9:35:53 | ram_total : 16.000000 | ram : 13.617300 | hard_volume : 1.200000 | hard_ops : 57.010000 | hard_throughput : 46.670000
+9:35:53 | https://edu.21-school.ru : available | inet_throughput : 50.988982
+9:35:53 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 480 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:37:18 | cpu : 8.650000 | processes : 493
+9:37:19 | ram_total : 16.000000 | ram : 13.628700 | hard_volume : 1.200000 | hard_ops : 56.990000 | hard_throughput : 46.580000
+9:37:19 | https://edu.21-school.ru : available | inet_throughput : 50.989138
+9:37:19 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 480 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:37:21 | cpu : 7.790000 | processes : 494
+9:37:21 | ram_total : 16.000000 | ram : 13.629100 | hard_volume : 1.200000 | hard_ops : 56.990000 | hard_throughput : 46.580000
+9:37:22 | https://edu.21-school.ru : available | inet_throughput : 50.989151
+9:37:22 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 480 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:47:33 | cpu : 5.900000 | processes : 499
+9:47:34 | ram_total : 16.000000 | ram : 13.441600 | hard_volume : 1.200000 | hard_ops : 56.970000 | hard_throughput : 47.450000
+9:47:34 | https://edu.21-school.ru : available | inet_throughput : 51.094107
+9:47:34 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 480 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:47:36 | cpu : 8.620000 | processes : 496
+9:47:36 | ram_total : 16.000000 | ram : 13.441700 | hard_volume : 1.200000 | hard_ops : 56.960000 | hard_throughput : 47.450000
+9:47:36 | https://edu.21-school.ru : available | inet_throughput : 51.094119
+9:47:37 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 481 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:48:25 | cpu : 5.140000 | processes : 496
+9:48:25 | ram_total : 16.000000 | ram : 13.498200 | hard_volume : 1.200000 | hard_ops : 56.950000 | hard_throughput : 47.400000
+9:48:25 | https://edu.21-school.ru : available | inet_throughput : 51.094200
+9:48:25 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 481 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+9:48:27 | cpu : 5.760000 | processes : 496
+9:48:27 | ram_total : 16.000000 | ram : 13.499200 | hard_volume : 1.200000 | hard_ops : 56.950000 | hard_throughput : 47.400000
+9:48:28 | https://edu.21-school.ru : available | inet_throughput : 51.094211
+9:48:28 | privileged : 0.030000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 481 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.500000 | system_errors : 45 | user_auths : 222
+11:38:42 | cpu : 4.950000 | processes : 440
+11:38:42 | ram_total : 16.000000 | ram : 8.382340 | hard_volume : 998.000000 | hard_ops : 57.430000 | hard_throughput : 41.880000
+11:38:42 | https://edu.21-school.ru : available | inet_throughput : 56.447153
+11:38:43 | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.510000 | system_errors : 45 | user_auths : 243
+11:38:44 | cpu : 9.520000 | processes : 440
+11:38:44 | ram_total : 16.000000 | ram : 8.383930 | hard_volume : 998.000000 | hard_ops : 57.430000 | hard_throughput : 41.870000
+11:38:45 | https://edu.21-school.ru : available | inet_throughput : 56.447158
+11:38:45 | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.510000 | system_errors : 45 | user_auths : 243
+11:38:47 | cpu : 39.300000 | processes : 440
+11:38:47 | ram_total : 16.000000 | ram : 8.402070 | hard_volume : 998.000000 | hard_ops : 57.430000 | hard_throughput : 41.850000
+11:38:47 | https://edu.21-school.ru : available | inet_throughput : 56.447179
+11:38:47 | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.510000 | system_errors : 45 | user_auths : 243
+11:48:13 | cpu : 4.500000 | processes : 442
+11:48:13 | ram_total : 16.000000 | ram : 8.830250 | hard_volume : 966.000000 | hard_ops : 57.290000 | hard_throughput : 37.660000
+11:48:14 | https://edu.21-school.ru : available | inet_throughput : 56.506549
+11:48:14 | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 438 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.510000 | system_errors : 45 | user_auths : 243
+11:48:15 | cpu : 9.950000 | processes : 442
+11:48:16 | ram_total : 16.000000 | ram : 8.721290 | hard_volume : 966.000000 | hard_ops : 57.290000 | hard_throughput : 37.660000
+11:48:16 | https://edu.21-school.ru : available | inet_throughput : 56.506556
+11:48:16 | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 438 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.510000 | system_errors : 45 | user_auths : 243
+11:48:18 | cpu : 6.250000 | processes : 441
+11:48:18 | ram_total : 16.000000 | ram : 8.684830 | hard_volume : 966.000000 | hard_ops : 57.290000 | hard_throughput : 37.650000
+11:48:19 | https://edu.21-school.ru : available | inet_throughput : 56.506572
+11:48:19 | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.510000 | system_errors : 45 | user_auths : 243
+13:14:29 | cpu : 5.550000 | processes : 459
+13:14:29 | ram_total : 16.000000 | ram : 11.188400 | hard_volume : 537.000000 | hard_ops : 57.460000 | hard_throughput : 90.170000
+13:14:29 | https://edu.21-school.ru : available | inet_throughput : 57.146786
+13:14:29 | privileged : 0.040000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 455 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.530000 | system_errors : 45 | user_auths : 243
+13:14:31 | cpu : 8.600000 | processes : 459
+13:14:31 | ram_total : 16.000000 | ram : 11.188200 | hard_volume : 537.000000 | hard_ops : 57.460000 | hard_throughput : 90.160000
+13:14:31 | https://edu.21-school.ru : available | inet_throughput : 57.146807
+13:14:31 | privileged : 0.040000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 453 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.530000 | system_errors : 45 | user_auths : 243
+13:14:33 | cpu : 6.450000 | processes : 458
+13:14:33 | ram_total : 16.000000 | ram : 11.179600 | hard_volume : 537.000000 | hard_ops : 57.460000 | hard_throughput : 90.130000
+13:14:33 | https://edu.21-school.ru : available | inet_throughput : 57.146814
+13:14:33 | privileged : 0.040000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 454 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.530000 | system_errors : 45 | user_auths : 243
+13:42:26 | cpu : 4.850000 | processes : 459
+13:42:26 | ram_total : 16.000000 | ram : 11.160500 | hard_volume : 530.000000 | hard_ops : 57.810000 | hard_throughput : 126.490000
+13:42:26 | https://edu.21-school.ru : available | inet_throughput : 57.257000
+13:42:27 | privileged : 0.080000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 453 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
+13:42:28 | cpu : 8.840000 | processes : 460
+13:42:28 | ram_total : 16.000000 | ram : 11.160900 | hard_volume : 530.000000 | hard_ops : 57.810000 | hard_throughput : 126.490000
+13:42:29 | https://edu.21-school.ru : available | inet_throughput : 57.257013
+13:42:29 | privileged : 0.080000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 453 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
+13:42:30 | cpu : 6.290000 | processes : 459
+13:42:31 | ram_total : 16.000000 | ram : 11.154400 | hard_volume : 530.000000 | hard_ops : 57.810000 | hard_throughput : 126.490000
+13:42:31 | https://edu.21-school.ru : available | inet_throughput : 57.257034
+13:42:31 | privileged : 0.080000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 452 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243

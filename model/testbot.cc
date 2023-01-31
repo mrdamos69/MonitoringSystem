@@ -105,14 +105,15 @@ void Lib_agent::compare_maps() {
   }
 }
 
-bool check_metric() {
+void check_metric() {
   Lib_agent curr;
 
   curr.read_conf();
-  curr.starting_agents("cpu_idle_usage", "https://edu.21-school.ru", 5);
+  std::string idle_ = "cpu_idle_usage";
+  std::string url_ = "https://edu.21-school.ru";
+  int time_ = 5;
+  curr.starting_agents(idle_, url_, time_);
   curr.compare_maps();
-
-  return false;
 }
 
 int main() {

@@ -3,8 +3,7 @@
 
 view::view(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::view)
-{
+    , ui(new Ui::view) {
     ui->setupUi(this);
 }
 
