@@ -3,7 +3,7 @@
 void input_file(std::string text) {
   std::mutex g_lock;
   g_lock.lock();
-  std::ofstream out("../text.txt",
+  std::ofstream out("../logs.txt",
                     std::ios::app); // поток для записи    if (out.is_open())
   {
     // std::cout << "Open" << std::endl;
