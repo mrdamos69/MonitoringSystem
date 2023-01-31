@@ -1,6 +1,6 @@
 #include "lib_agents.h"
 namespace {
-std::string validation_url(std::string &url) {
+int validation_url(std::string &url) {
   std::string command =
       "curl -I " + url + " -o /dev/null -s -w '%{http_code}\n'";
   std::string output = "";
@@ -14,7 +14,7 @@ std::string validation_url(std::string &url) {
       output += buffer;
   }
   pclose(pipe);
-  return (std::stod(output) == 200 ? "available" : "not available");
+  return (std::stod(output) == 200 ? 1 : 0);
 }
 
 double speed_network() {
@@ -55,11 +55,11 @@ double speed_network() {
 void Lib_agent::network_agent(std::string &url) {
   std::string result;
   double speed_network_ = speed_network();
-  std::string url_ = validation_url(url);
-  result = get_time() + " | " + url + " : " + url_ + " | " + "inet_throughput" +
+  int url_ = validation_url(url);
+  result = get_time() + " | " + url + " : " + ((url_ == 1) ? ("available") : ("not available")) + " | " + "inet_throughput" +
            " : " + std::to_string(speed_network_);
   input_file(result);
   system_metrics.insert(
-      std::make_pair("url", ((url_ == "not available") ? 1 : 0)));
+      std::make_pair("url", url_));
   system_metrics.insert(std::make_pair("inet_throughput", speed_network_));
 }
