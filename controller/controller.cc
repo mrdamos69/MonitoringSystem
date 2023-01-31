@@ -16,3 +16,7 @@ void s21::Controller::starting_agents_thread(std::string &lvl_privilege,
                                              std::string &url, int &time) {
   model.starting_agents_thread(lvl_privilege, url, time);
 }
+
+void s21::Controller::starting_project() {
+  model.start_bot();
+}

@@ -16,9 +16,9 @@ SOURCES += \
     ../model/agents/lib_network_agent.cc \
     ../model/agents/lib_special_agent.cc \
     ../model/model.cc \
+    ../model/agents/testbot.cc \
     ../model/utilitys/lib_start_agent.cc \
     ../model/utilitys/utils.cc \
-    ../unit_test/unit_test.cc \
     main.cpp \
     view.cpp
 

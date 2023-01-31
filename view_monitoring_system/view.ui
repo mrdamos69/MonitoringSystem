@@ -6,20 +6,115 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1148</width>
-    <height>664</height>
+    <width>1310</width>
+    <height>832</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>view</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1301</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="cpu_agent">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>640</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RadioButton</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="memory_agent">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>640</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RadioButton</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="network_agent">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>640</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RadioButton</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="dop_agent">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>640</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RadioButton</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="timer">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>650</y>
+      <width>113</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="start">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>650</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>start</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1148</width>
+     <width>1310</width>
      <height>21</height>
     </rect>
    </property>

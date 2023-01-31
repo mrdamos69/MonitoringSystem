@@ -11,7 +11,6 @@ void Lib_agent::starting_agents(std::string &lvl_privilege, std::string &url,
                                 int &time) {
   auto start = std::chrono::high_resolution_clock::now();
   auto finish = start + std::chrono::seconds(time);
-
   while (std::chrono::high_resolution_clock::now() < finish) {
     std::this_thread::sleep_until(awake_time());
     try {

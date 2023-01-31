@@ -2,7 +2,10 @@
 
 #include "../controller/controller.h"
 #include <QMainWindow>
-#include <QStandardItemModel>
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,9 +20,11 @@ public:
   view(QWidget *parent = nullptr);
   ~view();
 
+private slots:
+  void on_start_clicked();
+
 private:
   Ui::view *ui;
-  QStandardItemModel *new_table;
   s21::Controller *controller = nullptr;
 };
 

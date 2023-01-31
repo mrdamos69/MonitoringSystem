@@ -1,4 +1,4 @@
-#include "agents/lib_agents.h"
+#include "lib_agents.h"
 #include <array>
 #include <chrono>
 #include <cstdio>
@@ -24,13 +24,6 @@
   "https://api.telegram.org/"                                                  \
   "bot$5693025715:AAHibzvbeGmTZXs8mnRejUB8JxrnqGVq6VU/sendMessage"
 #define TEXT "Deploy status: "
-
-// static constexpr std::string host_name = []() {
-//     char hostname[1024];
-//     gethostname(hostname, 1024);
-//     std::string retVal(hostname);
-//     return (hostname);
-// };
 
 namespace {
 
@@ -105,7 +98,7 @@ void Lib_agent::compare_maps() {
   }
 }
 
-void check_metric() {
+void Lib_agent::starting_bot() {
   Lib_agent curr;
 
   curr.read_conf();
@@ -116,7 +109,7 @@ void check_metric() {
   curr.compare_maps();
 }
 
-int main() {
-  check_metric();
-  return 0;
-}
+//int main() {
+//  check_metric();
+//  return 0;
+//}

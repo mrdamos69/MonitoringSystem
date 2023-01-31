@@ -59,4 +59,5 @@ public:
   static void memory_agent();
   static void network_agent(std::string &url);
   static void special_agent(std::string &lvl_privilege);
+  static void starting_bot();
 };
