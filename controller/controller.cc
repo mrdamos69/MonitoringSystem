@@ -12,13 +12,8 @@ void s21::Controller::starting_special_agent(std::string &lvl_privilege) {
   model.starting_special_agent(lvl_privilege);
 }
 
-void s21::Controller::starting_agents_thread(std::string &lvl_privilege,
-                                             std::string &url, int &time) {
-  model.starting_agents_thread(lvl_privilege, url, time);
-}
-
-void s21::Controller::starting_project() {
-  model.start_bot();
+void s21::Controller::starting_project(std::vector<int> &agents) {
+  model.start_bot(agents);
 }
 
 std::string s21::Controller::print_last_strings() {

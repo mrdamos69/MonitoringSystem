@@ -12,13 +12,8 @@ void s21::Model::starting_special_agent(std::string &lvl_privilege) {
   Lib_agent::special_agent(lvl_privilege);
 }
 
-void s21::Model::starting_agents_thread(std::string &lvl_privilege,
-                                        std::string &url, int &time) {
-  Lib_agent::starting_agents(lvl_privilege, url, time);
-}
-
-void s21::Model::start_bot() {
-  Lib_agent::starting_bot();
+void s21::Model::start_bot(std::vector<int> &agents) {
+  Lib_agent::starting_bot(agents);
 }
 
 std::string s21::Model::print_last_str() {
