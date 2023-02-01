@@ -5,24 +5,34 @@ view::view(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::view) {
     ui->setupUi(this);
+    watcher_file();
 }
 
-view::~view()
-{
+view::~view() {
     delete ui;
 }
 
-
-void view::on_start_clicked()
-{
+//Запуск ядра
+void view::on_start_clicked() {
     controller->starting_project();
-    QFile file("/Users/luigiket/MonitoringSystem/logs.txt");
-    if (!file.open(QIODevice::ReadWrite))
-        QMessageBox::information(0, "info", file.errorString());
-    QTextStream in(&file);
-    ui->textBrowser->setText(in.readAll());
-    ui->textBrowser->move(10,10);
+}
+
+//Слежка файла
+void view::watcher_file() {
+//Создаем наследника
+fsWatcher = new QFileSystemWatcher(this);
+//устанавливаем слежку на файл
+fsWatcher->addPath("/Users/luigiket/MonitoringSystem/logs.txt");
+//Связываем сигнал со слотом, как только файл будет изменен
+//произойдет вызов слота changed(QString)
+connect(fsWatcher, SIGNAL(fileChanged(QString)), this, SLOT(settext()));
+}
+
+//Вывод содержимого файла
+void view::settext() {
+    std::string output = controller->print_last_strings();
+    QByteArray byteArray(output.c_str(), output.length());
+    ui->textBrowser->setText(byteArray);
     ui->textBrowser->show();
-    file.close();
 }
 

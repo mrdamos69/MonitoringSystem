@@ -20,3 +20,7 @@ void s21::Controller::starting_agents_thread(std::string &lvl_privilege,
 void s21::Controller::starting_project() {
   model.start_bot();
 }
+
+std::string s21::Controller::print_last_strings() {
+  return model.print_last_str();
+}

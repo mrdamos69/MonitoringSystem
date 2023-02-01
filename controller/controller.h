@@ -16,7 +16,8 @@ public:
 
   void starting_agents_thread(std::string &lvl_privilege, std::string &url,
                               int &time);
-  void starting_project();                            
+  void starting_project();
+  std::string print_last_strings();                          
 };
 
 } //  namespace s21

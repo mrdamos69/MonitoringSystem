@@ -17,6 +17,7 @@ public:
   void starting_agents_thread(std::string &lvl_privilege, std::string &url,
                               int &time);
   void start_bot();
+  std::string print_last_str();
 };
 } // namespace s21
 

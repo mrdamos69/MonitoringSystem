@@ -20,3 +20,7 @@ void s21::Model::starting_agents_thread(std::string &lvl_privilege,
 void s21::Model::start_bot() {
   Lib_agent::starting_bot();
 }
+
+std::string s21::Model::print_last_str() {
+  return print_last_string();
+}
