@@ -9,6 +9,7 @@
 #include <QTimer>
 #include <QDateTime>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class view;
@@ -34,6 +35,6 @@ private:
   s21::Controller *controller = nullptr;
   QFileSystemWatcher *fsWatcher;
   QTimer *timer_;
-  vector<int> agents{1, 1, 1, 1, 5};
+  vector<int> agents{0, 0, 0, 0, 5};
 };
 
