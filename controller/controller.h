@@ -13,10 +13,8 @@ public:
   void starting_memory_agent();
   void starting_network_agent(std::string &url);
   void starting_special_agent(std::string &lvl_privilege);
-
-  void starting_agents_thread(std::string &lvl_privilege, std::string &url,
-                              int &time);
-  void starting_project();                            
+  void starting_project(std::vector<int> &agents);
+  std::string print_last_strings();                          
 };
 
 } //  namespace s21

@@ -46,12 +46,17 @@ int number_of_processes() {
 } // namespace
 
 void Lib_agent::cpu_agent() {
-  std::string result;
+  std::stringstream result;
   double cpu_usage = cpu_load();
   int processes = number_of_processes();
-  result = get_time() + " | " + "cpu" + " : " + std::to_string(cpu_usage) +
-           " | " + "processes" + " : " + std::to_string(processes);
-  input_file(result);
+  result << get_time() << " "
+         << "cpu_agent"
+         << " | "
+         << "cpu"
+         << " : " << round(cpu_usage * 100) / 100 << " | "
+         << "processes"
+         << " : " << std::to_string(processes);
+  input_file(result.str());
   system_metrics.insert(std::make_pair("cpu", cpu_usage));
   system_metrics.insert(std::make_pair("processes", processes));
 }

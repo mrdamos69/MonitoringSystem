@@ -1,248 +1,308 @@
-15:49:42 | cpu : 3.840000 | processes : 472
-15:49:42 | ram_total : 16.000000 | ram : 12.063600 | hard_volume : 1.600000 | hard_ops : 57.240000 | hard_throughput : 93.200000
-15:49:43 | https://edu.21-school.ru : available | inet_throughput : 57.749288
-15:49:43 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:49:45 | cpu : 4.160000 | processes : 472
-15:49:45 | ram_total : 16.000000 | ram : 12.057300 | hard_volume : 1.600000 | hard_ops : 57.240000 | hard_throughput : 93.200000
-15:49:46 | https://edu.21-school.ru : available | inet_throughput : 57.749301
-15:49:46 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:49:57 | cpu : 4.620000 | processes : 473
-15:49:57 | ram_total : 16.000000 | ram : 12.079700 | hard_volume : 1.600000 | hard_ops : 57.240000 | hard_throughput : 93.190000
-15:49:58 | https://edu.21-school.ru : available | inet_throughput : 57.749317
-15:49:58 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:49:59 | cpu : 7.560000 | processes : 473
-15:50:0 | ram_total : 16.000000 | ram : 12.082000 | hard_volume : 1.600000 | hard_ops : 57.240000 | hard_throughput : 93.190000
-15:50:0 | https://edu.21-school.ru : available | inet_throughput : 57.749329
-15:50:0 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 469 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:50:2 | cpu : 4.680000 | processes : 472
-15:50:2 | ram_total : 16.000000 | ram : 12.050700 | hard_volume : 1.600000 | hard_ops : 57.240000 | hard_throughput : 93.160000
-15:50:3 | https://edu.21-school.ru : available | inet_throughput : 57.749339
-15:50:4 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:51:26 | cpu : 20.700000 | processes : 474
-15:51:26 | ram_total : 16.000000 | ram : 12.236400 | hard_volume : 1.600000 | hard_ops : 57.230000 | hard_throughput : 93.030000
-15:51:26 | https://edu.21-school.ru : available | inet_throughput : 57.749451
-15:51:26 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:51:28 | cpu : 6.220000 | processes : 473
-15:51:28 | ram_total : 16.000000 | ram : 12.061100 | hard_volume : 1.600000 | hard_ops : 57.230000 | hard_throughput : 93.010000
-15:51:29 | https://edu.21-school.ru : available | inet_throughput : 57.749465
-15:51:29 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:51:31 | cpu : 8.230000 | processes : 473
-15:51:31 | ram_total : 16.000000 | ram : 12.064600 | hard_volume : 1.600000 | hard_ops : 57.230000 | hard_throughput : 93.010000
-15:51:31 | https://edu.21-school.ru : available | inet_throughput : 57.749479
-15:51:31 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:52:4 | cpu : 4.640000 | processes : 472
-15:52:4 | ram_total : 16.000000 | ram : 12.069900 | hard_volume : 1.600000 | hard_ops : 57.220000 | hard_throughput : 92.960000
-15:52:5 | https://edu.21-school.ru : available | inet_throughput : 57.749521
-15:52:5 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:52:7 | cpu : 5.800000 | processes : 472
-15:52:7 | ram_total : 16.000000 | ram : 12.064100 | hard_volume : 1.600000 | hard_ops : 57.220000 | hard_throughput : 92.960000
-15:52:7 | https://edu.21-school.ru : available | inet_throughput : 57.749533
-15:52:7 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:52:9 | cpu : 5.800000 | processes : 472
-15:52:9 | ram_total : 16.000000 | ram : 12.059000 | hard_volume : 1.600000 | hard_ops : 57.220000 | hard_throughput : 92.960000
-15:52:9 | https://edu.21-school.ru : available | inet_throughput : 57.749540
-15:52:9 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:53:34 | cpu : 3.100000 | processes : 472
-15:53:34 | ram_total : 16.000000 | ram : 12.082200 | hard_volume : 1.600000 | hard_ops : 57.220000 | hard_throughput : 92.880000
-15:53:35 | https://edu.21-school.ru : available | inet_throughput : 57.749717
-15:53:35 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:53:36 | cpu : 4.600000 | processes : 472
-15:53:37 | ram_total : 16.000000 | ram : 12.070600 | hard_volume : 1.600000 | hard_ops : 57.220000 | hard_throughput : 92.880000
-15:53:37 | https://edu.21-school.ru : available | inet_throughput : 57.749729
-15:53:37 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:53:39 | cpu : 3.410000 | processes : 472
-15:53:39 | ram_total : 16.000000 | ram : 12.068300 | hard_volume : 1.600000 | hard_ops : 57.220000 | hard_throughput : 92.870000
-15:53:40 | https://edu.21-school.ru : available | inet_throughput : 57.749737
-15:53:40 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 481 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:55:42 | cpu : 3.360000 | processes : 473
-15:55:42 | ram_total : 16.000000 | ram : 12.075900 | hard_volume : 1.600000 | hard_ops : 57.210000 | hard_throughput : 92.750000
-15:55:42 | https://edu.21-school.ru : available | inet_throughput : 57.749939
-15:55:42 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:55:44 | cpu : 3.860000 | processes : 473
-15:55:44 | ram_total : 16.000000 | ram : 12.079300 | hard_volume : 1.600000 | hard_ops : 57.210000 | hard_throughput : 92.750000
-15:55:44 | https://edu.21-school.ru : available | inet_throughput : 57.749947
-15:55:45 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-15:55:46 | cpu : 3.380000 | processes : 473
-15:55:46 | ram_total : 16.000000 | ram : 12.078600 | hard_volume : 1.600000 | hard_ops : 57.210000 | hard_throughput : 92.750000
-15:55:46 | https://edu.21-school.ru : available | inet_throughput : 57.749953
-15:55:47 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 468 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.560000 | system_errors : 45 | user_auths : 243
-16:19:7 | cpu : 3.460000 | processes : 474
-16:19:7 | ram_total : 16.000000 | ram : 12.264400 | hard_volume : 1.600000 | hard_ops : 57.010000 | hard_throughput : 89.360000
-16:19:8 | https://edu.21-school.ru : available | inet_throughput : 57.763260
-16:19:8 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 468 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:19:10 | cpu : 4.340000 | processes : 474
-16:19:10 | ram_total : 16.000000 | ram : 12.254100 | hard_volume : 1.600000 | hard_ops : 57.010000 | hard_throughput : 89.350000
-16:19:10 | https://edu.21-school.ru : available | inet_throughput : 57.763273
-16:19:10 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:19:12 | cpu : 3.490000 | processes : 474
-16:19:12 | ram_total : 16.000000 | ram : 12.238500 | hard_volume : 1.600000 | hard_ops : 57.010000 | hard_throughput : 89.340000
-16:19:12 | https://edu.21-school.ru : available | inet_throughput : 57.763279
-16:19:12 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 468 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:47:58 | cpu : 3.840000 | processes : 481
-16:47:58 | ram_total : 16.000000 | ram : 12.086500 | hard_volume : 1.600000 | hard_ops : 56.590000 | hard_throughput : 81.770000
-16:47:59 | https://edu.21-school.ru : available | inet_throughput : 57.941357
-16:47:59 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 475 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:48:1 | cpu : 10.400000 | processes : 485
-16:48:1 | ram_total : 16.000000 | ram : 12.076400 | hard_volume : 1.600000 | hard_ops : 56.590000 | hard_throughput : 81.770000
-16:48:1 | https://edu.21-school.ru : available | inet_throughput : 57.941366
-16:48:1 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 473 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:48:3 | cpu : 4.520000 | processes : 482
-16:48:3 | ram_total : 16.000000 | ram : 12.073200 | hard_volume : 1.600000 | hard_ops : 56.590000 | hard_throughput : 81.750000
-16:48:3 | https://edu.21-school.ru : available | inet_throughput : 57.941376
-16:48:3 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 475 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:48:15 | cpu : 4.160000 | processes : 480
-16:48:16 | ram_total : 16.000000 | ram : 12.064300 | hard_volume : 1.600000 | hard_ops : 56.580000 | hard_throughput : 81.740000
-16:48:16 | https://edu.21-school.ru : available | inet_throughput : 57.941411
-16:48:16 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:48:18 | cpu : 3.850000 | processes : 480
-16:48:18 | ram_total : 16.000000 | ram : 12.064900 | hard_volume : 1.600000 | hard_ops : 56.580000 | hard_throughput : 81.740000
-16:48:18 | https://edu.21-school.ru : available | inet_throughput : 57.941419
-16:48:18 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:48:20 | cpu : 14.800000 | processes : 497
-16:48:20 | ram_total : 16.000000 | ram : 12.077900 | hard_volume : 1.600000 | hard_ops : 56.580000 | hard_throughput : 81.740000
-16:48:20 | https://edu.21-school.ru : available | inet_throughput : 57.941427
-16:48:20 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 481 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:49:24 | cpu : 3.570000 | processes : 480
-16:49:24 | ram_total : 16.000000 | ram : 12.072700 | hard_volume : 1.600000 | hard_ops : 56.560000 | hard_throughput : 81.510000
-16:49:25 | https://edu.21-school.ru : available | inet_throughput : 57.945493
-16:49:25 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:49:27 | cpu : 3.550000 | processes : 480
-16:49:27 | ram_total : 16.000000 | ram : 12.061100 | hard_volume : 1.600000 | hard_ops : 56.560000 | hard_throughput : 81.510000
-16:49:27 | https://edu.21-school.ru : available | inet_throughput : 57.945984
-16:49:27 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-16:49:29 | cpu : 4.210000 | processes : 480
-16:49:29 | ram_total : 16.000000 | ram : 12.059300 | hard_volume : 1.600000 | hard_ops : 56.560000 | hard_throughput : 81.510000
-16:49:29 | https://edu.21-school.ru : available | inet_throughput : 57.945992
-16:49:29 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:12 | cpu : 3.540000 | processes : 479
-17:0:12 | ram_total : 16.000000 | ram : 12.144500 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.640000
-17:0:12 | https://edu.21-school.ru : available | inet_throughput : 58.014012
-17:0:12 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:14 | cpu : 3.980000 | processes : 479
-17:0:14 | ram_total : 16.000000 | ram : 12.133300 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.640000
-17:0:14 | https://edu.21-school.ru : available | inet_throughput : 58.014020
-17:0:14 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 474 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:16 | cpu : 4.300000 | processes : 479
-17:0:16 | ram_total : 16.000000 | ram : 12.133700 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.630000
-17:0:16 | https://edu.21-school.ru : available | inet_throughput : 58.014027
-17:0:17 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 473 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:24 | cpu : 3.320000 | processes : 478
-17:0:24 | ram_total : 16.000000 | ram : 12.120400 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.630000
-17:0:24 | https://edu.21-school.ru : available | inet_throughput : 58.014040
-17:0:24 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 472 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:26 | cpu : 3.230000 | processes : 478
-17:0:26 | ram_total : 16.000000 | ram : 12.120800 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.630000
-17:0:26 | https://edu.21-school.ru : available | inet_throughput : 58.014048
-17:0:27 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 472 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:28 | cpu : 3.240000 | processes : 478
-17:0:28 | ram_total : 16.000000 | ram : 12.121300 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.630000
-17:0:29 | https://edu.21-school.ru : available | inet_throughput : 58.014061
-17:0:29 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 472 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:37 | cpu : 3.370000 | processes : 480
-17:0:37 | ram_total : 16.000000 | ram : 12.045100 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.600000
-17:0:38 | https://edu.21-school.ru : available | inet_throughput : 58.014086
-17:0:38 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 473 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:39 | cpu : 3.370000 | processes : 480
-17:0:40 | ram_total : 16.000000 | ram : 12.048000 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.600000
-17:0:40 | https://edu.21-school.ru : available | inet_throughput : 58.014094
-17:0:40 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 489 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:0:42 | cpu : 2.970000 | processes : 480
-17:0:42 | ram_total : 16.000000 | ram : 12.039100 | hard_volume : 1.600000 | hard_ops : 56.390000 | hard_throughput : 79.590000
-17:0:42 | https://edu.21-school.ru : available | inet_throughput : 58.014101
-17:0:42 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 473 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:42:33 | cpu : 3.620000 | processes : 470
-17:42:33 | ram_total : 16.000000 | ram : 11.730200 | hard_volume : 1.600000 | hard_ops : 56.130000 | hard_throughput : 77.180000
-17:42:33 | https://edu.21-school.ru : available | inet_throughput : 58.116791
-17:42:34 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:42:35 | cpu : 5.220000 | processes : 470
-17:42:35 | ram_total : 16.000000 | ram : 11.731300 | hard_volume : 1.600000 | hard_ops : 56.130000 | hard_throughput : 77.180000
-17:42:36 | https://edu.21-school.ru : available | inet_throughput : 58.116803
-17:42:36 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:42:37 | cpu : 3.260000 | processes : 470
-17:42:38 | ram_total : 16.000000 | ram : 11.727400 | hard_volume : 1.600000 | hard_ops : 56.130000 | hard_throughput : 77.180000
-17:42:38 | https://edu.21-school.ru : available | inet_throughput : 58.116811
-17:42:38 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:42:49 | cpu : 3.310000 | processes : 469
-17:42:49 | ram_total : 16.000000 | ram : 11.718600 | hard_volume : 1.600000 | hard_ops : 56.130000 | hard_throughput : 77.170000
-17:42:50 | https://edu.21-school.ru : available | inet_throughput : 58.116834
-17:42:50 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:42:51 | cpu : 3.300000 | processes : 469
-17:42:52 | ram_total : 16.000000 | ram : 11.719000 | hard_volume : 1.600000 | hard_ops : 56.130000 | hard_throughput : 77.170000
-17:42:52 | https://edu.21-school.ru : available | inet_throughput : 58.116841
-17:42:52 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:42:54 | cpu : 3.300000 | processes : 469
-17:42:54 | ram_total : 16.000000 | ram : 11.719300 | hard_volume : 1.600000 | hard_ops : 56.130000 | hard_throughput : 77.170000
-17:42:54 | https://edu.21-school.ru : available | inet_throughput : 58.116848
-17:42:54 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:54:49 | cpu : 3.710000 | processes : 469
-17:54:50 | ram_total : 16.000000 | ram : 11.724500 | hard_volume : 1.600000 | hard_ops : 56.070000 | hard_throughput : 76.630000
-17:54:50 | https://edu.21-school.ru : available | inet_throughput : 58.117986
-17:54:50 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:54:52 | cpu : 3.340000 | processes : 469
-17:54:52 | ram_total : 16.000000 | ram : 11.726900 | hard_volume : 1.600000 | hard_ops : 56.070000 | hard_throughput : 76.630000
-17:54:52 | https://edu.21-school.ru : available | inet_throughput : 58.118003
-17:54:52 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 462 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:54:54 | cpu : 4.520000 | processes : 469
-17:54:54 | ram_total : 16.000000 | ram : 11.725600 | hard_volume : 1.600000 | hard_ops : 56.070000 | hard_throughput : 76.630000
-17:54:54 | https://edu.21-school.ru : available | inet_throughput : 58.118010
-17:54:54 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 463 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:56:48 | cpu : 3.290000 | processes : 471
-17:56:48 | ram_total : 16.000000 | ram : 11.728200 | hard_volume : 1.600000 | hard_ops : 56.060000 | hard_throughput : 76.510000
-17:56:49 | https://edu.21-school.ru : available | inet_throughput : 58.118148
-17:56:49 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:56:50 | cpu : 3.270000 | processes : 471
-17:56:50 | ram_total : 16.000000 | ram : 11.741900 | hard_volume : 1.600000 | hard_ops : 56.060000 | hard_throughput : 76.510000
-17:56:51 | https://edu.21-school.ru : available | inet_throughput : 58.118162
-17:56:51 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-17:56:52 | cpu : 4.300000 | processes : 471
-17:56:53 | ram_total : 16.000000 | ram : 11.731300 | hard_volume : 1.600000 | hard_ops : 56.060000 | hard_throughput : 76.500000
-17:56:53 | https://edu.21-school.ru : available | inet_throughput : 58.118174
-17:56:53 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:38:9 | cpu : 2.840000 | processes : 471
-18:38:9 | ram_total : 16.000000 | ram : 11.890800 | hard_volume : 1.600000 | hard_ops : 55.780000 | hard_throughput : 73.960000
-18:38:9 | https://edu.21-school.ru : available | inet_throughput : 58.230466
-18:38:9 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:38:11 | cpu : 4.300000 | processes : 471
-18:38:11 | ram_total : 16.000000 | ram : 11.890100 | hard_volume : 1.600000 | hard_ops : 55.780000 | hard_throughput : 73.960000
-18:38:11 | https://edu.21-school.ru : available | inet_throughput : 58.230478
-18:38:11 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 465 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:38:13 | cpu : 4.380000 | processes : 471
-18:38:13 | ram_total : 16.000000 | ram : 11.889400 | hard_volume : 1.600000 | hard_ops : 55.780000 | hard_throughput : 73.950000
-18:38:14 | https://edu.21-school.ru : available | inet_throughput : 58.230488
-18:38:14 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 466 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:39:0 | cpu : 15.300000 | processes : 481
-18:39:1 | ram_total : 16.000000 | ram : 11.896200 | hard_volume : 1.600000 | hard_ops : 55.770000 | hard_throughput : 73.870000
-18:39:1 | https://edu.21-school.ru : available | inet_throughput : 58.230661
-18:39:1 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 469 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:39:2 | cpu : 4.000000 | processes : 476
-18:39:3 | ram_total : 16.000000 | ram : 11.896200 | hard_volume : 1.600000 | hard_ops : 55.770000 | hard_throughput : 73.860000
-18:39:3 | https://edu.21-school.ru : available | inet_throughput : 58.230670
-18:39:3 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 470 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:39:5 | cpu : 5.420000 | processes : 476
-18:39:5 | ram_total : 16.000000 | ram : 11.895400 | hard_volume : 1.600000 | hard_ops : 55.770000 | hard_throughput : 73.860000
-18:39:5 | https://edu.21-school.ru : available | inet_throughput : 58.230680
-18:39:5 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 470 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:39:43 | cpu : 3.250000 | processes : 475
-18:39:43 | ram_total : 16.000000 | ram : 11.869100 | hard_volume : 1.600000 | hard_ops : 55.770000 | hard_throughput : 73.830000
-18:39:44 | https://edu.21-school.ru : available | inet_throughput : 58.230751
-18:39:44 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 467 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:39:46 | cpu : 3.250000 | processes : 475
-18:39:46 | ram_total : 16.000000 | ram : 11.868700 | hard_volume : 1.600000 | hard_ops : 55.770000 | hard_throughput : 73.820000
-18:39:46 | https://edu.21-school.ru : available | inet_throughput : 58.230760
-18:39:46 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 469 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:39:48 | cpu : 3.300000 | processes : 475
-18:39:48 | ram_total : 16.000000 | ram : 11.871400 | hard_volume : 1.600000 | hard_ops : 55.770000 | hard_throughput : 73.820000
-18:39:48 | https://edu.21-school.ru : available | inet_throughput : 58.230771
-18:39:48 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 469 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:42:9 | cpu : 3.480000 | processes : 476
-18:42:9 | ram_total : 16.000000 | ram : 12.063000 | hard_volume : 1.600000 | hard_ops : 55.740000 | hard_throughput : 73.550000
-18:42:9 | https://edu.21-school.ru : available | inet_throughput : 58.232232
-18:42:9 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 470 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:42:11 | cpu : 3.480000 | processes : 476
-18:42:11 | ram_total : 16.000000 | ram : 12.051300 | hard_volume : 1.600000 | hard_ops : 55.740000 | hard_throughput : 73.550000
-18:42:11 | https://edu.21-school.ru : available | inet_throughput : 58.232241
-18:42:11 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 470 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
-18:42:13 | cpu : 2.750000 | processes : 476
-18:42:13 | ram_total : 16.000000 | ram : 12.051600 | hard_volume : 1.600000 | hard_ops : 55.740000 | hard_throughput : 73.550000
-18:42:13 | https://edu.21-school.ru : available | inet_throughput : 58.232247
-18:42:13 | privileged : 0.090000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 470 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.550000 | system_errors : 45 | user_auths : 243
+17:18:33cpu_agent | cpu : 3.120000 | processes : 437
+17:18:33memory_agent | ram_total : 16.000000 | ram : 8.056160 | hard_volume : 1.600000 | hard_ops : 50.690000 | hard_throughput : 22.230000
+17:18:33network_agent | https://edu.21-school.ru : available | inet_throughput : 88.452024
+17:18:34dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:18:36cpu_agent | cpu : 3.930000 | processes : 437
+17:18:36memory_agent | ram_total : 16.000000 | ram : 8.055080 | hard_volume : 1.600000 | hard_ops : 50.690000 | hard_throughput : 22.230000
+17:18:36network_agent | https://edu.21-school.ru : available | inet_throughput : 88.452037
+17:18:37dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:18:44network_agent | https://edu.21-school.ru : available | inet_throughput : 88.452054
+17:18:45dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:18:47network_agent | https://edu.21-school.ru : available | inet_throughput : 88.452061
+17:18:47dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:18:49network_agent | https://edu.21-school.ru : available | inet_throughput : 88.452073
+17:18:49dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:19:15cpu_agent | cpu : 4.650000 | processes : 437
+17:19:18cpu_agent | cpu : 4.650000 | processes : 437
+17:19:20cpu_agent | cpu : 14.100000 | processes : 442
+17:19:23cpu_agent | cpu : 5.300000 | processes : 437
+17:19:25cpu_agent | cpu : 4.650000 | processes : 436
+17:19:27cpu_agent | cpu : 3.840000 | processes : 436
+17:19:30cpu_agent | cpu : 3.170000 | processes : 436
+17:19:32cpu_agent | cpu : 3.930000 | processes : 436
+17:19:34cpu_agent | cpu : 2.450000 | processes : 436
+17:19:37cpu_agent | cpu : 3.120000 | processes : 436
+17:19:39cpu_agent | cpu : 4.510000 | processes : 436
+17:19:42cpu_agent | cpu : 4.650000 | processes : 436
+17:19:50cpu_agent | cpu : 3.220000 | processes : 436
+17:19:50dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:19:53cpu_agent | cpu : 4.580000 | processes : 436
+17:19:53dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:19:55cpu_agent | cpu : 3.200000 | processes : 436
+17:19:56dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:19:58cpu_agent | cpu : 4.680000 | processes : 436
+17:19:58dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:1cpu_agent | cpu : 10.600000 | processes : 441
+17:20:1dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 440 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:3cpu_agent | cpu : 3.960000 | processes : 436
+17:20:3dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:6cpu_agent | cpu : 4.580000 | processes : 436
+17:20:6dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:8cpu_agent | cpu : 2.380000 | processes : 436
+17:20:8dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:11cpu_agent | cpu : 3.930000 | processes : 436
+17:20:11dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:13cpu_agent | cpu : 3.200000 | processes : 436
+17:20:13dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:16cpu_agent | cpu : 3.200000 | processes : 436
+17:20:16dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:18cpu_agent | cpu : 4.650000 | processes : 436
+17:20:19dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:21cpu_agent | cpu : 5.460000 | processes : 436
+17:20:21dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:23cpu_agent | cpu : 4.000000 | processes : 436
+17:20:24dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:26cpu_agent | cpu : 3.220000 | processes : 436
+17:20:26dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:29cpu_agent | cpu : 3.870000 | processes : 436
+17:20:29dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:37cpu_agent | cpu : 5.380000 | processes : 438
+17:20:38dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:40cpu_agent | cpu : 25.000000 | processes : 455
+17:20:40dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 444 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:43cpu_agent | cpu : 3.870000 | processes : 438
+17:20:43dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:45cpu_agent | cpu : 4.580000 | processes : 439
+17:20:45dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:48cpu_agent | cpu : 4.300000 | processes : 438
+17:20:48dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:50cpu_agent | cpu : 3.200000 | processes : 438
+17:20:50dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:53cpu_agent | cpu : 3.900000 | processes : 438
+17:20:53dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:55cpu_agent | cpu : 6.200000 | processes : 438
+17:20:56dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:20:58cpu_agent | cpu : 3.930000 | processes : 438
+17:20:58dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 437 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:1cpu_agent | cpu : 11.500000 | processes : 443
+17:21:1dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 442 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:3cpu_agent | cpu : 3.930000 | processes : 436
+17:21:3dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:6cpu_agent | cpu : 4.680000 | processes : 436
+17:21:6dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:8cpu_agent | cpu : 3.200000 | processes : 436
+17:21:8dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:11cpu_agent | cpu : 2.380000 | processes : 436
+17:21:11dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:13cpu_agent | cpu : 4.610000 | processes : 436
+17:21:13dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:16cpu_agent | cpu : 5.380000 | processes : 436
+17:21:16dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:18cpu_agent | cpu : 3.960000 | processes : 436
+17:21:19dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:21cpu_agent | cpu : 3.930000 | processes : 436
+17:21:21dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:23cpu_agent | cpu : 2.430000 | processes : 436
+17:21:24dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:26cpu_agent | cpu : 3.140000 | processes : 436
+17:21:26dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:29cpu_agent | cpu : 6.200000 | processes : 436
+17:21:29dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:31cpu_agent | cpu : 3.930000 | processes : 436
+17:21:31dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:34cpu_agent | cpu : 6.150000 | processes : 436
+17:21:34dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:36cpu_agent | cpu : 3.930000 | processes : 436
+17:21:36dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 433 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:39cpu_agent | cpu : 3.870000 | processes : 436
+17:21:39dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:41cpu_agent | cpu : 3.870000 | processes : 436
+17:21:42dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:44cpu_agent | cpu : 3.220000 | processes : 436
+17:21:44dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 433 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:46cpu_agent | cpu : 3.930000 | processes : 436
+17:21:47dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 433 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:49cpu_agent | cpu : 3.900000 | processes : 437
+17:21:49dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:52cpu_agent | cpu : 4.650000 | processes : 437
+17:21:52dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:54cpu_agent | cpu : 5.380000 | processes : 437
+17:21:54dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:21:57cpu_agent | cpu : 3.120000 | processes : 437
+17:21:57dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:22:35 cpu_agent | cpu : 3.960000 | processes : 437
+17:22:36 memory_agent | ram_total : 16.000000 | ram : 8.138810 | hard_volume : 1.600000 | hard_ops : 50.640000 | hard_throughput : 22.200000
+17:22:36 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.551805
+17:22:36 dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:22:38 cpu_agent | cpu : 4.610000 | processes : 437
+17:22:39 memory_agent | ram_total : 16.000000 | ram : 8.141450 | hard_volume : 1.600000 | hard_ops : 50.640000 | hard_throughput : 22.200000
+17:22:39 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.551815
+17:22:39 dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 436 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:22:47 cpu_agent | cpu : 5.420000 | processes : 436
+17:22:48 memory_agent | ram_total : 16.000000 | ram : 8.128500 | hard_volume : 1.600000 | hard_ops : 50.630000 | hard_throughput : 22.200000
+17:22:48 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.551834
+17:22:48 dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:22:50 cpu_agent | cpu : 3.170000 | processes : 436
+17:22:51 memory_agent | ram_total : 16.000000 | ram : 8.128720 | hard_volume : 1.600000 | hard_ops : 50.630000 | hard_throughput : 22.190000
+17:22:51 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.551845
+17:22:51 dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 435 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:24:15 cpu_agent | cpu : 3.780000 | processes : 437
+17:24:15 memory_agent | ram_total : 16.000000 | ram : 8.136670 | hard_volume : 1.600000 | hard_ops : 50.620000 | hard_throughput : 22.200000
+17:24:15 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.551978
+17:24:15 dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:24:18 cpu_agent | cpu : 3.170000 | processes : 436
+17:24:18 memory_agent | ram_total : 16.000000 | ram : 8.112380 | hard_volume : 1.600000 | hard_ops : 50.620000 | hard_throughput : 22.190000
+17:24:18 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.551993
+17:24:18 dop_agent | privileged : 0.010000 | total_swap : 0.000000 | used_swap : 0.000000 | proc_queue_length : 434 | virtual_mem_volume : 957.000000 | virtual_mem_free : 710.000000 | inodes : 55360 | hard_read_time : 0.490000 | system_errors : 45 | user_auths : 345
+17:45:42 cpu_agent | cpu : 3.700000 | processes : 457
+17:45:45 cpu_agent | cpu : 15.400000 | processes : 456
+17:45:58 cpu_agent | cpu : 7.900000 | processes : 456
+17:46:0 cpu_agent | cpu : 14.300000 | processes : 459
+17:46:14 cpu_agent | cpu : 6.400000 | processes : 451
+17:46:16 cpu_agent | cpu : 3.600000 | processes : 453
+17:46:23 cpu_agent | cpu : 3.600000 | processes : 453
+17:46:26 cpu_agent | cpu : 9.900000 | processes : 454
+17:54:15 cpu_agent | cpu : 3.6 | processes : 451
+17:54:17 cpu_agent | cpu : 4.9 | processes : 451
+17:54:30 cpu_agent | cpu : 4.1 | processes : 450
+17:54:32 cpu_agent | cpu : 3.6 | processes : 450
+17:55:55 cpu_agent | cpu : 3.34 | processes : 449
+17:55:57 cpu_agent | cpu : 4.26 | processes : 449
+18:8:53 cpu_agent | cpu : 4.33 | processes : 454
+18:8:53 memory_agent | ram_total : 16 | ram : 10.41 | hard_volume : 1.6 | hard_ops : 50.12 | hard_throughput : 20.11
+18:8:54 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.76
+18:8:54 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 453 | virtual_mem_volume : 957 | virtual_mem_free : 710 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:8:56 cpu_agent | cpu : 4.63 | processes : 454
+18:8:57 memory_agent | ram_total : 16 | ram : 10.4 | hard_volume : 1.6 | hard_ops : 50.12 | hard_throughput : 20.1
+18:8:57 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.76
+18:8:57 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 452 | virtual_mem_volume : 957 | virtual_mem_free : 710 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:9:6 cpu_agent | cpu : 10.3 | processes : 453
+18:9:6 memory_agent | ram_total : 16 | ram : 10.41 | hard_volume : 1.6 | hard_ops : 50.12 | hard_throughput : 20.1
+18:9:6 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.76
+18:9:6 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 451 | virtual_mem_volume : 957 | virtual_mem_free : 710 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:9:9 cpu_agent | cpu : 15.9 | processes : 454
+18:9:9 memory_agent | ram_total : 16 | ram : 10.46 | hard_volume : 1.6 | hard_ops : 50.12 | hard_throughput : 20.09
+18:9:10 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.76
+18:9:10 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 449 | virtual_mem_volume : 957 | virtual_mem_free : 710 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:21 cpu_agent | cpu : 9.9 | processes : 460
+18:17:21 memory_agent | ram_total : 16 | ram : 11.81 | hard_volume : 1.6 | hard_ops : 50 | hard_throughput : 22.31
+18:17:21 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:21 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 459 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:24 cpu_agent | cpu : 4.3 | processes : 462
+18:17:24 memory_agent | ram_total : 16 | ram : 11.86 | hard_volume : 1.6 | hard_ops : 50 | hard_throughput : 22.31
+18:17:24 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:24 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 459 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:33 cpu_agent | cpu : 5.14 | processes : 459
+18:17:33 memory_agent | ram_total : 16 | ram : 11.8 | hard_volume : 1.6 | hard_ops : 49.99 | hard_throughput : 22.3
+18:17:33 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:33 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 457 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:36 cpu_agent | cpu : 3.3 | processes : 459
+18:17:36 memory_agent | ram_total : 16 | ram : 11.8 | hard_volume : 1.6 | hard_ops : 49.99 | hard_throughput : 22.3
+18:17:36 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:36 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 458 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:45 cpu_agent | cpu : 5.6 | processes : 459
+18:17:45 memory_agent | ram_total : 16 | ram : 11.78 | hard_volume : 1.6 | hard_ops : 49.99 | hard_throughput : 22.3
+18:17:45 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:45 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 458 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:48 cpu_agent | cpu : 44.4 | processes : 463
+18:17:48 memory_agent | ram_total : 16 | ram : 12.18 | hard_volume : 1.6 | hard_ops : 49.99 | hard_throughput : 22.3
+18:17:48 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:48 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 457 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:51 cpu_agent | cpu : 55.5 | processes : 463
+18:17:52 memory_agent | ram_total : 16 | ram : 12.5 | hard_volume : 1.6 | hard_ops : 49.99 | hard_throughput : 22.3
+18:17:52 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:52 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 457 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:17:54 cpu_agent | cpu : 25.1 | processes : 464
+18:17:55 memory_agent | ram_total : 16 | ram : 12.07 | hard_volume : 1.6 | hard_ops : 49.99 | hard_throughput : 22.29
+18:17:55 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:17:55 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 458 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:18:55 cpu_agent | cpu : 3.92 | processes : 470
+18:18:55 memory_agent | ram_total : 16 | ram : 12.69 | hard_volume : 1.6 | hard_ops : 49.97 | hard_throughput : 22.23
+18:18:55 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:18:55 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 456 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:18:58 cpu_agent | cpu : 4.25 | processes : 469
+18:18:58 memory_agent | ram_total : 16 | ram : 12.63 | hard_volume : 1.6 | hard_ops : 49.97 | hard_throughput : 22.22
+18:18:58 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.85
+18:18:58 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 459 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:19:42 cpu_agent | cpu : 3.65 | processes : 465
+18:19:42 memory_agent | ram_total : 16 | ram : 12.23 | hard_volume : 1.6 | hard_ops : 49.96 | hard_throughput : 22.18
+18:19:42 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.88
+18:19:42 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 464 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:19:45 cpu_agent | cpu : 6.4 | processes : 464
+18:19:45 memory_agent | ram_total : 16 | ram : 12.19 | hard_volume : 1.6 | hard_ops : 49.96 | hard_throughput : 22.18
+18:19:45 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.88
+18:19:45 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 463 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:19:54 cpu_agent | cpu : 4.83 | processes : 464
+18:19:54 memory_agent | ram_total : 16 | ram : 12.23 | hard_volume : 1.6 | hard_ops : 49.96 | hard_throughput : 22.17
+18:19:54 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.89
+18:19:54 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 462 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:19:57 cpu_agent | cpu : 4.76 | processes : 464
+18:19:57 memory_agent | ram_total : 16 | ram : 12.24 | hard_volume : 1.6 | hard_ops : 49.96 | hard_throughput : 22.17
+18:19:57 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.89
+18:19:58 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 461 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:20:30 cpu_agent | cpu : 4.58 | processes : 461
+18:20:30 memory_agent | ram_total : 16 | ram : 11.89 | hard_volume : 1.6 | hard_ops : 49.95 | hard_throughput : 22.17
+18:20:31 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.9
+18:20:31 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 457 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:20:33 cpu_agent | cpu : 4.2 | processes : 461
+18:20:33 memory_agent | ram_total : 16 | ram : 11.89 | hard_volume : 1.6 | hard_ops : 49.95 | hard_throughput : 22.17
+18:20:34 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.9
+18:20:34 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 460 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:0 cpu_agent | cpu : 12.6 | processes : 466
+18:21:1 memory_agent | ram_total : 16 | ram : 11.92 | hard_volume : 1.6 | hard_ops : 49.95 | hard_throughput : 22.16
+18:21:1 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.91
+18:21:1 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 460 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:3 cpu_agent | cpu : 4.14 | processes : 461
+18:21:4 memory_agent | ram_total : 16 | ram : 11.9 | hard_volume : 1.6 | hard_ops : 49.95 | hard_throughput : 22.16
+18:21:4 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.91
+18:21:4 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 460 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:13 cpu_agent | cpu : 3.7 | processes : 460
+18:21:13 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 458 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:15 cpu_agent | cpu : 3.77 | processes : 460
+18:21:16 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 459 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:24 cpu_agent | cpu : 4.1 | processes : 461
+18:21:24 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 460 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:27 cpu_agent | cpu : 5.16 | processes : 460
+18:21:27 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 459 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:29 cpu_agent | cpu : 3.27 | processes : 460
+18:21:29 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 459 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:32 cpu_agent | cpu : 5.11 | processes : 460
+18:21:32 dop_agent | privileged : 0.01 | total_swap : 0 | used_swap : 0 | proc_queue_length : 458 | virtual_mem_volume : 957 | virtual_mem_free : 709 | inodes : 55360 | hard_read_time : 0.49 | system_errors : 45 | user_auths : 345
+18:21:41 cpu_agent | cpu : 8.25 | processes : 460
+18:21:41 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:21:43 cpu_agent | cpu : 4.12 | processes : 460
+18:21:44 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:21:46 cpu_agent | cpu : 4.18 | processes : 460
+18:21:46 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:21:49 cpu_agent | cpu : 7.44 | processes : 461
+18:21:49 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:21:52 cpu_agent | cpu : 3.24 | processes : 461
+18:21:52 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:21:54 cpu_agent | cpu : 3.61 | processes : 462
+18:21:54 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:21:57 cpu_agent | cpu : 4.7 | processes : 462
+18:21:57 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:22:0 cpu_agent | cpu : 15.8 | processes : 477
+18:22:0 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:22:9 cpu_agent | cpu : 4.12 | processes : 461
+18:22:9 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:22:11 cpu_agent | cpu : 4.58 | processes : 461
+18:22:12 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:22:14 cpu_agent | cpu : 4.2 | processes : 461
+18:22:14 network_agent | https://edu.21-school.ru : available | inet_throughput : 88.92
+18:22:17 cpu_agent | cpu : 9.4 | processes : 462
+18:22:17 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:20 cpu_agent | cpu : 3.73 | processes : 462
+18:22:20 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:22 cpu_agent | cpu : 4.6 | processes : 463
+18:22:22 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:25 cpu_agent | cpu : 4.6 | processes : 463
+18:22:25 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:28 cpu_agent | cpu : 4.48 | processes : 463
+18:22:28 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:30 cpu_agent | cpu : 3.61 | processes : 463
+18:22:30 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:33 cpu_agent | cpu : 4.22 | processes : 460
+18:22:33 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:36 cpu_agent | cpu : 4.54 | processes : 460
+18:22:36 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:38 cpu_agent | cpu : 7.3 | processes : 460
+18:22:38 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:41 cpu_agent | cpu : 5.9 | processes : 460
+18:22:41 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:44 cpu_agent | cpu : 3.73 | processes : 460
+18:22:44 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:46 cpu_agent | cpu : 3.7 | processes : 460
+18:22:47 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02
+18:22:49 cpu_agent | cpu : 4.18 | processes : 460
+18:22:49 network_agent | https://edu.21-school.ru : available | inet_throughput : 89.02

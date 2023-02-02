@@ -15,12 +15,13 @@
 #include <fstream>
 #include <iostream>
 #include <map>
-#include <math.h>
+#include <cmath>
 #include <mutex>
 #include <regex>
 #include <string>
 #include <thread>
 #include <vector>
+#include <sstream>
 
 static const std::vector<std::string> vec_operators{"<", "<=", "==", ">=", ">"};
 static const std::string alpha_num{"0123456789."};
@@ -35,7 +36,7 @@ public:
 
   static void read_conf();
   static void starting_agents(std::string &lvl_privilege, std::string &url,
-                              int &time);
+                              std::vector<int> &agents);
 
   void compare_maps();
 
@@ -59,5 +60,5 @@ public:
   static void memory_agent();
   static void network_agent(std::string &url);
   static void special_agent(std::string &lvl_privilege);
-  static void starting_bot();
+  static void starting_bot(std::vector<int> &agents);
 };

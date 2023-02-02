@@ -98,18 +98,11 @@ void Lib_agent::compare_maps() {
   }
 }
 
-void Lib_agent::starting_bot() {
+void Lib_agent::starting_bot(std::vector<int> &agents) {
   Lib_agent curr;
-
   curr.read_conf();
   std::string idle_ = "cpu_idle_usage";
   std::string url_ = "https://edu.21-school.ru";
-  int time_ = 5;
-  curr.starting_agents(idle_, url_, time_);
+  curr.starting_agents(idle_, url_, agents);
   curr.compare_maps();
 }
-
-//int main() {
-//  check_metric();
-//  return 0;
-//}
