@@ -237,7 +237,7 @@ int number_of_user_authorizations() {
 } // namespace
 
 void Lib_agent::special_agent(std::string &lvl_privilege) {
-  std::string result = "";
+  std::stringstream result;
   double cpu_load_privilege_ = cpu_load_privilege(lvl_privilege);
   double total_swap_volume_ = total_swap_volume();
   double amount_of_swap_used_ = amount_of_swap_used();
@@ -249,23 +249,31 @@ void Lib_agent::special_agent(std::string &lvl_privilege) {
   int number_of_errors_from_the_system_log_ =
       number_of_errors_from_the_system_log();
   int number_of_user_authorizations_ = number_of_user_authorizations();
-  result =
-      get_time() + " | " + "privileged" + " : " +
-      std::to_string(cpu_load_privilege_) + " | " + "total_swap" +
-      " : " + std::to_string(total_swap_volume_) + " | " +
-      "used_swap" + " : " + std::to_string(amount_of_swap_used_) +
-      " | " + "proc_queue_length" + " : " +
-      std::to_string(number_of_processes_in_queue_) + 
-      " | " + "virtual_mem_volume" + " : " +
-      std::to_string(full_virtual_memory_) + " | " + "virtual_mem_free" +
-      " : " + std::to_string(free_virtual_memory_) + " | " +
-      "inodes" + " : " +
-      std::to_string(total_number_of_inodes_) + " | " +
-      "hard_read_time" + " : " +
-      std::to_string(average_hard_disk_read_time_) + " | " + "system_errors" +
-      " : " + std::to_string(number_of_errors_from_the_system_log_) + " | " +
-      "user_auths" + " : " + std::to_string(number_of_user_authorizations_);
-  input_file(result);
+  result << get_time() << " "
+         << "dop_agent"
+         << " | "
+         << "privileged"
+         << " : " << round(cpu_load_privilege_ * 100) / 100 << " | "
+         << "total_swap"
+         << " : " << round(total_swap_volume_ * 100) / 100 << " | "
+         << "used_swap"
+         << " : " << round(amount_of_swap_used_ * 100) / 100 << " | "
+         << "proc_queue_length"
+         << " : " << round(number_of_processes_in_queue_ * 100) / 100 << " | "
+         << "virtual_mem_volume"
+         << " : " << round(full_virtual_memory_ * 100) / 100 << " | "
+         << "virtual_mem_free"
+         << " : " << round(free_virtual_memory_ * 100) / 100 << " | "
+         << "inodes"
+         << " : " << round(total_number_of_inodes_ * 100) / 100 << " | "
+         << "hard_read_time"
+         << " : " << round(average_hard_disk_read_time_ * 100) / 100 << " | "
+         << "system_errors"
+         << " : " << round(number_of_errors_from_the_system_log_ * 100) / 100
+         << " | "
+         << "user_auths"
+         << " : " << round(number_of_user_authorizations_ * 100) / 100;
+  input_file(result.str());
   system_metrics.insert(std::make_pair("priveleged", cpu_load_privilege_));
   system_metrics.insert(std::make_pair("total_swap", total_swap_volume_));
   system_metrics.insert(std::make_pair("used_swap", amount_of_swap_used_));

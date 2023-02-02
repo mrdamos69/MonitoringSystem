@@ -21,6 +21,7 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <sstream>
 
 static const std::vector<std::string> vec_operators{"<", "<=", "==", ">=", ">"};
 static const std::string alpha_num{"0123456789."};

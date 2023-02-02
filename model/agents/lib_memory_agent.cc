@@ -111,19 +111,26 @@ double hard_throughput() {
 } // namespace
 
 void Lib_agent::memory_agent() {
-  std::string result = "";
+  std::stringstream result;
   double ram_total_ = ram_total();
   double ram_ = ram();
   double hard_volume_ = hard_volume();
   double hard_ops_ = hard_ops();
   double hard_throughput_ = hard_throughput();
-  result = get_time() + " | " + "ram_total" + " : " +
-           std::to_string(ram_total_) + " | " + "ram" + " : " +
-           std::to_string(ram_) + " | " + "hard_volume" + " : " +
-           std::to_string(hard_volume_) + " | " + "hard_ops" + " : " +
-           std::to_string(hard_ops_) + " | " + "hard_throughput" + " : " +
-           std::to_string(hard_throughput_);
-  input_file(result);
+  result << get_time() << " "
+         << "memory_agent"
+         << " | "
+         << "ram_total"
+         << " : " << round(ram_total_ * 100) / 100 << " | "
+         << "ram"
+         << " : " << round(ram_ * 100) / 100 << " | "
+         << "hard_volume"
+         << " : " << round(hard_volume_ * 100) / 100 << " | "
+         << "hard_ops"
+         << " : " << round(hard_ops_ * 100) / 100 << " | "
+         << "hard_throughput"
+         << " : " << round(hard_throughput_ * 100) / 100;
+  input_file(result.str());
   system_metrics.insert(std::make_pair("ram_total", ram_total_));
   system_metrics.insert(std::make_pair("ram", ram_));
   system_metrics.insert(std::make_pair("hard_volume", hard_volume_));
