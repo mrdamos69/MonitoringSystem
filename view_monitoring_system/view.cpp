@@ -15,7 +15,7 @@ void view::on_start_clicked() {
   controller->starting_project(agents);
   connect(timer_, SIGNAL(timeout()), this, SLOT(on_start_clicked()));
   timer_->setInterval(6000);
-  timer_->start();  qDebug() << agents[0];
+  timer_->start();
 }
 
 //Слежка файла
