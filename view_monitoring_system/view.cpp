@@ -10,17 +10,12 @@ view::~view() { delete ui; }
 
 //Запуск ядра
 void view::on_start_clicked() {
-  qDebug() << agents[0];
-  qDebug() << agents[1];
-  qDebug() << agents[2];
-  qDebug() << agents[3];
-  qDebug() << agents[4];
   checker();
   watcher_file();
   controller->starting_project(agents);
   connect(timer_, SIGNAL(timeout()), this, SLOT(on_start_clicked()));
   timer_->setInterval(6000);
-  timer_->start();
+  timer_->start();  qDebug() << agents[0];
 }
 
 //Слежка файла
@@ -44,10 +39,6 @@ void view::settext() {
 
 //Проверка метрик
 void view::checker() {
-  ui->cpu_on->setChecked(true);
-  ui->mem_on->setChecked(true);
-  ui->net_on->setChecked(true);
-  ui->dop_on->setChecked(true);
   agents[0] = (ui->cpu_on->isChecked()) ? 1 : 0;
   agents[1] = (ui->mem_on->isChecked()) ? 1 : 0;
   agents[2] = (ui->net_on->isChecked()) ? 1 : 0;
