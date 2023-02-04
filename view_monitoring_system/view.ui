@@ -6,12 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1310</width>
-    <height>832</height>
+    <width>1334</width>
+    <height>839</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777</width>
+    <height>16778</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>view</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextBrowser" name="textBrowser">
@@ -229,7 +241,10 @@
         </sizepolicy>
        </property>
        <property name="minimum">
-        <number>5</number>
+        <number>6000</number>
+       </property>
+       <property name="maximum">
+        <number>60000</number>
        </property>
       </widget>
      </item>
@@ -279,7 +294,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1310</width>
+     <width>1334</width>
      <height>21</height>
     </rect>
    </property>
