@@ -44,9 +44,9 @@ gcov_report:
 	@open ./report/index.html
 
 install:
-	@make clean
-	@mkdir build
-	@cd view && qmake && make && make clean && rm Makefile && cd ../ && mv view/view.app build/
+        @make clean
+        @mkdir build
+        @cd view && qmake && make && make clean && rm Makefile && cd ../ && mv view/view.app build/
 
 uninstall:
 	@rm -rf build*
@@ -88,4 +88,4 @@ check:
 	@cd view && clang-format -n ./*.cpp ./*.h
 
 cppcheck:
-	@cppcheck --enable=all --suppress=missingIncludeSystem $(ALL_FILE_CC)
+        @cppcheck --enable=all --suppress=missingIncludeSystem $(ALL_FILE_CC)

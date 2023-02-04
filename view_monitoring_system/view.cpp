@@ -14,7 +14,7 @@ void view::on_start_clicked() {
   watcher_file();
   controller->starting_project(agents);
   connect(timer_, SIGNAL(timeout()), this, SLOT(on_start_clicked()));
-  timer_->setInterval(6000);
+  timer_->setInterval(agents[4]);
   timer_->start();
 }
 

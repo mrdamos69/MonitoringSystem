@@ -35,6 +35,6 @@ private:
   s21::Controller *controller = nullptr;
   QFileSystemWatcher *fsWatcher;
   QTimer *timer_;
-  vector<int> agents{0, 0, 0, 0, 5};
+  vector<int> agents{0, 0, 0, 0, 0};
 };
 
