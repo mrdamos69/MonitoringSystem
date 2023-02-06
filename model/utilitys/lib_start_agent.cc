@@ -22,5 +22,4 @@ void Lib_agent::starting_agents(std::string &lvl_privilege, std::string &url,
     } catch (const std::exception &ex) {
       std::cout << "Thread exited with exception: " << ex.what() << "\n";
     }
-//  }
 }
