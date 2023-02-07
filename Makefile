@@ -88,4 +88,4 @@ check:
 	@cd view && clang-format -n ./*.cpp ./*.h
 
 cppcheck:
-        @cppcheck --enable=all --suppress=missingIncludeSystem $(ALL_FILE_CC)
+	@cppcheck --enable=all --suppress=missingIncludeSystem $(ALL_FILE_CC)
