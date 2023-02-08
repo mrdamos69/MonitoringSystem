@@ -7,7 +7,7 @@ PR_NAME = s21_Monitoring_system
 
 ALL_FILE_CC = ./model/model.cc ./model/agents/lib_cpu_agent.cc ./model/agents/lib_memory_agent.cc \
 ./model/agents/lib_network_agent.cc ./model/utilitys/lib_start_agent.cc ./model/utilitys/utils.cc ./controller/controller.cc \
-./model/agents/lib_special_agent.cc ./model/agents/testbot.cc ./model/agents/lib_agents.cc
+./model/agents/lib_special_agent.cc  ./model/agents/lib_agents.cc ./model/agents/testbot.cc
 
 ALL_FILE_H = ./model/model.h ./model/agents/lib_agents.h ./model/utilitys/utils.h ./controller/controller.h
 ALL_FILE_O = model.o
@@ -46,7 +46,7 @@ gcov_report:
 install:
 	@make clean
 	@mkdir build
-	@cd view && qmake && make && make clean && rm Makefile && cd ../ && mv view/view.app build/
+	@cd view_monitoring_system && qmake && make && make clean && rm Makefile && cd ../ && mv view_monitoring_system/view_monitoring_system.app build/
 
 uninstall:
 	@rm -rf build*
@@ -88,6 +88,4 @@ check:
 	@cd view && clang-format -n ./*.cpp ./*.h
 
 cppcheck:
-	@cppcheck --enable=all --suppress=missingIncludeSystem $(ALL_FILE_CC)
-
-
+        @cppcheck --enable=all --suppress=missingIncludeSystem $(ALL_FILE_CC)

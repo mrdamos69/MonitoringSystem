@@ -1,7 +1,7 @@
 #include "view.h"
 #include "ui_view.h"
 
-view::view(QWidget *parent) : QMainWindow(parent), ui(new Ui::view),  groupActionUpper_(new QActionGroup(this)) {
+view::view(QWidget *parent) : QMainWindow(parent), groupActionUpper_(new QActionGroup(this)), ui(new Ui::view) {
   ui->setupUi(this);
   timer_ = new QTimer(this);
   /*---группировка actions находящихся на верхнем toolBar---*/
@@ -28,7 +28,7 @@ void view::watcher_file() {
   //Создаем наследника
   fsWatcher = new QFileSystemWatcher(this);
   //устанавливаем слежку на файл
-  fsWatcher->addPath("../../../../logs.txt");
+  fsWatcher->addPath(path_logs);
   //Связываем сигнал со слотом, как только файл будет изменен
   //произойдет вызов слота changed(QString)
   connect(fsWatcher, SIGNAL(fileChanged(QString)), this, SLOT(settext()));
@@ -36,7 +36,8 @@ void view::watcher_file() {
 
 //Вывод содержимого файла
 void view::settext() {
-  std::string output = controller->print_last_strings();
+  std::string path_log = path_logs.toStdString();
+  std::string output = controller->print_last_strings(path_log);
   QByteArray byteArray(output.c_str(), output.length());
   ui->textBrowser->setText(byteArray);
   ui->textBrowser->show();
@@ -146,10 +147,14 @@ auto view::action_start_all() -> void {
  }
 
 auto view::start_slot() -> void {
-          controller->starting_project(agents);
+          std::string path_conf = path_config.toStdString();
+          std::string path_log = path_logs.toStdString();
+          if (!path_conf.empty() && !path_log.empty()) {
+          controller->starting_project(agents, path_conf, path_log);
           connect(timer_, SIGNAL(timeout()), this, SLOT(start_slot()));
           timer_->start();
           timer_->setInterval(agents[4]);
+          }
 }
 
 auto view::action_timer() -> void {
@@ -164,3 +169,32 @@ auto view::action_timer() -> void {
       agents[4] = ui->time_upd->text().toInt();
     }
  }
+
+void view::on_logs_txt_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(
+          this,
+          "Открыть документ",
+          QDir::currentPath(),
+          "Все файлы (*.*) ;; Файлы документов (*.doc *.rtf);; Файлы PNG (*.png)");
+    if (!filename.isNull() ) {
+        path_logs  = filename.toUtf8();
+    } else {
+        QMessageBox::warning(this, "Внимание","Log file not choosed");
+    }
+}
+
+
+void view::on_config_conf_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(
+          this,
+          "Открыть документ",
+          QDir::currentPath(),
+          "Все файлы (*.*) ;; Файлы документов (*.doc *.rtf);; Файлы PNG (*.png)");
+    if (!filename.isNull() ) {
+        path_config  = filename.toUtf8();
+    } else {
+         QMessageBox::warning(this, "Внимание","Config file not choosed");
+    }
+}
