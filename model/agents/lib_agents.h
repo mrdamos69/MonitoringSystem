@@ -1,4 +1,7 @@
-#pragma once
+#ifndef LIB_AGENTS_H_
+#define LIB_AGENTS_H_
+
+
 #ifdef __APPLE__
 #define SYSTEM_CHECK 1
 #endif // __APPLE__
@@ -62,3 +65,5 @@ public:
   static void special_agent(std::string &lvl_privilege, std::string &path_logs);
   static void starting_bot(std::vector<int> &agents, std::string &path_config, std::string &path_logs);
 };
+
+#endif // LIB_AGENTS_H_
