@@ -190,7 +190,7 @@ int number_of_errors_from_the_system_log() {
   std::string command;
   if (SYSTEM_CHECK) {
     command =
-        "cat /var/log/fusioninventory.log | grep error | wc -l | awk '$1=$1'";
+      "cat /var/log/fusioninventory.log | grep error | wc -l | awk '$1=$1'";
   } else {
     command = "grep -c "
               "error"
@@ -278,16 +278,16 @@ void Lib_agent::special_agent(std::string &lvl_privilege, std::string &path_logs
   system_metrics.insert(std::make_pair("total_swap", total_swap_volume_));
   system_metrics.insert(std::make_pair("used_swap", amount_of_swap_used_));
   system_metrics.insert(
-      std::make_pair("proc_queue_length", number_of_processes_in_queue_));
+    std::make_pair("proc_queue_length", number_of_processes_in_queue_));
   system_metrics.insert(
-      std::make_pair("virtual_mem_volume", full_virtual_memory_));
+    std::make_pair("virtual_mem_volume", full_virtual_memory_));
   system_metrics.insert(
-      std::make_pair("virtual_mem_free", free_virtual_memory_));
+    std::make_pair("virtual_mem_free", free_virtual_memory_));
   system_metrics.insert(std::make_pair("inodes", total_number_of_inodes_));
   system_metrics.insert(
-      std::make_pair("hard_read_time", average_hard_disk_read_time_));
+    std::make_pair("hard_read_time", average_hard_disk_read_time_));
   system_metrics.insert(
-      std::make_pair("system_errors", number_of_errors_from_the_system_log_));
+    std::make_pair("system_errors", number_of_errors_from_the_system_log_));
   system_metrics.insert(
-      std::make_pair("user_auths", number_of_user_authorizations_));
+    std::make_pair("user_auths", number_of_user_authorizations_));
 }

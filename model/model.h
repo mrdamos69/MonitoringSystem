@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MODEL_H_
+#define MODEL_H_
 
 #include "agents/lib_agents.h"
 
@@ -18,3 +19,4 @@ public:
 };
 } // namespace s21
 
+#endif // MODEL_H_
