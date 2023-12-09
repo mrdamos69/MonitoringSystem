@@ -80,6 +80,7 @@ Implement at least one more agent collecting the following additional metrics:
 
    ```bash
    git clone https://github.com/mrdamos69/MonitoringSystem.git
+   cd MonitoringSystem
 
 2. **Build the project:**
     ```bash
