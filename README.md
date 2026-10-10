@@ -1,94 +1,41 @@
-# Monitoring System Project
+# System metrics monitor
 
-## Overview
+A C++17 and Qt desktop project for inspecting CPU, memory and network-related measurements. It combines a graphical interface, worker threads and text-based logging.
 
-The **Monitoring System project** is designed to provide continuous surveillance of an operating system by monitoring specific metrics. The system consists of a kernel and dynamically connectable agents, implemented as dynamic libraries. The project is written in C++17 following the Google style guide and employs the Model-View-Controller (MVC) pattern.
+The engineering focus is separation between metric collection, orchestration and presentation. The monitoring agents here are system-metric collectors, not LLM agents.
 
-## Features
+## Code walkthrough
 
-### 1. Monitoring System Implementation
+| Area | What to inspect |
+|---|---|
+| [Metric collectors](model/agents/) | CPU, memory, network and additional system measurements |
+| [Worker startup](model/utilitys/lib_start_agent.cc) | Thread-based collector execution |
+| [Model](model/model.h) | Entry points for monitoring operations |
+| [Controller](controller/) | Interface between the model and Qt view |
+| [Qt interface](view_monitoring_system/) | Controls, configuration and log presentation |
+| [Tests](unit_test/unit_test.cc) | Existing GoogleTest cases |
 
-- **Language:** C++17
-- **Directory Structure:**
-  - `src`: Contains the program code.
-  - `agents`: Dynamic libraries (agents) are stored here.
-  - `logs`: Log files are stored here, each named with the full date of its creation.
-- **Build System:** Makefile with standard GNU targets (all, install, uninstall, clean, dvi, dist, tests).
-- **Namespace:** The program code is organized within the `s21` namespace.
-- **Unit Tests:** Full coverage of modules with unit tests using the GTest library.
-- **GUI:** Implementation based on any GUI library with C++17 API (e.g., Qt, SFML, GTK+).
-- **MVC Pattern:**
-  - Business logic is separated into the model.
-  - No business code in the view.
-  - No interface code in the controller and model.
-  - Controllers are thin.
+## Build
 
-### 2. Agents
+The Qt project is [view_monitoring_system.pro](view_monitoring_system/view_monitoring_system.pro). Open it in Qt Creator with a C++17-capable desktop kit.
 
-- **Dynamic Connection/Disconnection:** Agents can be dynamically connected/disconnected while the monitoring system kernel is running.
-- **Agent Types:**
-  - CPU Load Monitoring Agent
-  - Memory Monitoring Agent
-  - Network Monitoring Agent
-- **Agent Configuration:**
-  - Agent name
-  - Agent type
-  - List of critical metric values
-  - Metrics update time
+The existing Makefile also provides:
 
-### 3. Logging
+```bash
+make install
+make test
+```
 
-- Metrics are logged in a specified format with a timestamp.
-- Separate log file for each day of system operation.
+The install target expects a macOS `.app` bundle and qmake on PATH. GoogleTest is required for the test target. Metric collectors rely on operating-system commands, so portability needs to be checked for the target OS.
 
-### 4. User Interface
+## Scope
 
-- Display the last 20 lines of the log with dynamic updates.
-- List of connected agents.
-- Detailed information about agents:
-  - Agent type
-  - Monitored metrics
-  - Time elapsed since agent's start
-  - Metrics update time
-- Dynamic configuration changes for running agents with saving to a configuration file.
-- Disconnecting selected agents.
+This is an earlier engineering project, not a production monitoring service. Collectors are compiled into the application; the published code should not be described as a verified dynamic-plugin platform. Existing tests are included, but no complete coverage figure is claimed.
 
-### 5. Notifications
-
-- Simple Telegram bot for sending messages on critical metric values.
-- Enable/disable duplication of notifications to a specified email address.
-
-## Part 3 Bonus Features
-
-### Additional Agent Metrics
-
-Implement at least one more agent collecting the following additional metrics:
-
-- CPU load by privilege level
-- Total swap volume
-- Amount of swap used
-- Number of processes ready to run in the queue
-- Counting full and free virtual memory
-- Total number of inodes
-- Average hard disk read time
-- Number of errors from the system log
-- Number of user authorizations
-
-## Implementation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/mrdamos69/MonitoringSystem.git
-   cd MonitoringSystem
-
-2. **Build the project:**
-    ```bash
-    make install
+Before using it outside a local development environment, review shell-command construction, configuration handling and notification settings. Do not put credentials or personal data into public configuration or logs.
 
 ## Contributors
-[Dmitrii Chichkanov (mrdamos69)](https://github.com/mrdamos69)
 
-[Ayzat Akhmetzyanov (AjzSAhmetzyanov)](https://github.com/AjzSAhmetzyanov)
-
-[Aydin Shamil (DonOutcast)](https://github.com/DonOutcast)
+- [Dmitrii Chichkanov](https://github.com/mrdamos69)
+- [Ayzat Akhmetzyanov](https://github.com/AjzSAhmetzyanov)
+- [Aydin Shamil](https://github.com/DonOutcast)
